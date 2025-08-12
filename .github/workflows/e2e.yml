@@ -1,0 +1,37 @@
+name: E2E Tests
+
+on:
+  pull_request:
+    paths:
+      - 'src/**'
+      - 'tests/**'
+      - 'global.setup.ts'
+      - 'playwright.config.ts'
+
+jobs:
+  playwright:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install Dependencies
+        run: npm ci
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+      - name: Run Unit Tests
+        run: npm run test:unit
+      - name: Build Next.js App
+        run: npm run build
+      - name: Start Next.js App
+        run: npm run start &
+      - name: Wait for App to be Ready
+        run: npx wait-on http://localhost:3000 -t 60000
+      - name: Run Playwright Tests
+        env:
+          TEST_USERNAME: ${{ secrets.TEST_USERNAME }}
+          TEST_PASSWORD: ${{ secrets.TEST_PASSWORD }}
+          CI: true
+        run: npx playwright test 

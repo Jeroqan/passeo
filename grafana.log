@@ -1,0 +1,884 @@
+grafana-1  | logger=settings t=2025-06-25T22:04:34.585226735Z level=info msg="Starting Grafana" version=10.0.1 commit=5a30620b85 branch=HEAD compiled=2023-06-20T08:03:23Z
+grafana-1  | logger=settings t=2025-06-25T22:04:34.585475384Z level=warn msg="\"sentry\" frontend logging provider is deprecated and will be removed in the next major version. Use \"grafana\" provider instead."
+grafana-1  | logger=settings t=2025-06-25T22:04:34.585496528Z level=info msg="Config loaded from" file=/usr/share/grafana/conf/defaults.ini
+grafana-1  | logger=settings t=2025-06-25T22:04:34.585499473Z level=info msg="Config loaded from" file=/etc/grafana/grafana.ini
+grafana-1  | logger=settings t=2025-06-25T22:04:34.585501142Z level=info msg="Config overridden from command line" arg="default.paths.data=/var/lib/grafana"
+grafana-1  | logger=settings t=2025-06-25T22:04:34.585502782Z level=info msg="Config overridden from command line" arg="default.paths.logs=/var/log/grafana"
+grafana-1  | logger=settings t=2025-06-25T22:04:34.585504129Z level=info msg="Config overridden from command line" arg="default.paths.plugins=/var/lib/grafana/plugins"
+grafana-1  | logger=settings t=2025-06-25T22:04:34.585505501Z level=info msg="Config overridden from command line" arg="default.paths.provisioning=/etc/grafana/provisioning"
+grafana-1  | logger=settings t=2025-06-25T22:04:34.585507909Z level=info msg="Config overridden from command line" arg="default.log.mode=console"
+grafana-1  | logger=settings t=2025-06-25T22:04:34.585509509Z level=info msg="Config overridden from Environment variable" var="GF_PATHS_DATA=/var/lib/grafana"
+grafana-1  | logger=settings t=2025-06-25T22:04:34.585511123Z level=info msg="Config overridden from Environment variable" var="GF_PATHS_LOGS=/var/log/grafana"
+grafana-1  | logger=settings t=2025-06-25T22:04:34.58551248Z level=info msg="Config overridden from Environment variable" var="GF_PATHS_PLUGINS=/var/lib/grafana/plugins"
+grafana-1  | logger=settings t=2025-06-25T22:04:34.585514737Z level=info msg="Config overridden from Environment variable" var="GF_PATHS_PROVISIONING=/etc/grafana/provisioning"
+grafana-1  | logger=settings t=2025-06-25T22:04:34.585516285Z level=info msg="Config overridden from Environment variable" var="GF_SECURITY_ADMIN_PASSWORD=*********"
+grafana-1  | logger=settings t=2025-06-25T22:04:34.58551846Z level=info msg="Config overridden from Environment variable" var="GF_LOG_LEVEL=debug"
+grafana-1  | logger=settings t=2025-06-25T22:04:34.585520594Z level=info msg=Target target=[all]
+grafana-1  | logger=settings t=2025-06-25T22:04:34.585526527Z level=info msg="Path Home" path=/usr/share/grafana
+grafana-1  | logger=settings t=2025-06-25T22:04:34.585541794Z level=info msg="Path Data" path=/var/lib/grafana
+grafana-1  | logger=settings t=2025-06-25T22:04:34.585563058Z level=info msg="Path Logs" path=/var/log/grafana
+grafana-1  | logger=settings t=2025-06-25T22:04:34.585565493Z level=info msg="Path Plugins" path=/var/lib/grafana/plugins
+grafana-1  | logger=settings t=2025-06-25T22:04:34.585567351Z level=info msg="Path Provisioning" path=/etc/grafana/provisioning
+grafana-1  | logger=settings t=2025-06-25T22:04:34.585569415Z level=info msg="App mode production"
+grafana-1  | logger=sqlstore t=2025-06-25T22:04:34.585732979Z level=info msg="Connecting to DB" dbtype=sqlite3
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.598514616Z level=info msg="Starting DB migrations"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60181655Z level=debug msg="Skipping migration: Already executed" id="create migration_log table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601860632Z level=debug msg="Skipping migration: Already executed" id="create user table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601864019Z level=debug msg="Skipping migration: Already executed" id="add unique index user.login"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601865757Z level=debug msg="Skipping migration: Already executed" id="add unique index user.email"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601867379Z level=debug msg="Skipping migration: Already executed" id="drop index UQE_user_login - v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601868821Z level=debug msg="Skipping migration: Already executed" id="drop index UQE_user_email - v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601870691Z level=debug msg="Skipping migration: Already executed" id="Rename table user to user_v1 - v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601872957Z level=debug msg="Skipping migration: Already executed" id="create user table v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601874405Z level=debug msg="Skipping migration: Already executed" id="create index UQE_user_login - v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601875676Z level=debug msg="Skipping migration: Already executed" id="create index UQE_user_email - v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601877499Z level=debug msg="Skipping migration: Already executed" id="copy data_source v1 to v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601879148Z level=debug msg="Skipping migration: Already executed" id="Drop old table user_v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601880917Z level=debug msg="Skipping migration: Already executed" id="Add column help_flags1 to user table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60188327Z level=debug msg="Skipping migration: Already executed" id="Update user table charset"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601884934Z level=debug msg="Skipping migration: Already executed" id="Add last_seen_at column to user"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601886803Z level=debug msg="Skipping migration: Already executed" id="Add missing user data"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601888737Z level=debug msg="Skipping migration: Already executed" id="Add is_disabled column to user"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601890053Z level=debug msg="Skipping migration: Already executed" id="Add index user.login/user.email"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601891634Z level=debug msg="Skipping migration: Already executed" id="Add is_service_account column to user"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601893368Z level=debug msg="Skipping migration: Already executed" id="Update is_service_account column to nullable"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601894938Z level=debug msg="Skipping migration: Already executed" id="create temp user table v1-7"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601896264Z level=debug msg="Skipping migration: Already executed" id="create index IDX_temp_user_email - v1-7"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601897612Z level=debug msg="Skipping migration: Already executed" id="create index IDX_temp_user_org_id - v1-7"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601898934Z level=debug msg="Skipping migration: Already executed" id="create index IDX_temp_user_code - v1-7"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601900239Z level=debug msg="Skipping migration: Already executed" id="create index IDX_temp_user_status - v1-7"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601901787Z level=debug msg="Skipping migration: Already executed" id="Update temp_user table charset"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60190315Z level=debug msg="Skipping migration: Already executed" id="drop index IDX_temp_user_email - v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601904494Z level=debug msg="Skipping migration: Already executed" id="drop index IDX_temp_user_org_id - v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601905866Z level=debug msg="Skipping migration: Already executed" id="drop index IDX_temp_user_code - v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601909384Z level=debug msg="Skipping migration: Already executed" id="drop index IDX_temp_user_status - v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601913099Z level=debug msg="Skipping migration: Already executed" id="Rename table temp_user to temp_user_tmp_qwerty - v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601914684Z level=debug msg="Skipping migration: Already executed" id="create temp_user v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60191615Z level=debug msg="Skipping migration: Already executed" id="create index IDX_temp_user_email - v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601921985Z level=debug msg="Skipping migration: Already executed" id="create index IDX_temp_user_org_id - v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601923516Z level=debug msg="Skipping migration: Already executed" id="create index IDX_temp_user_code - v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601924854Z level=debug msg="Skipping migration: Already executed" id="create index IDX_temp_user_status - v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601926313Z level=debug msg="Skipping migration: Already executed" id="copy temp_user v1 to v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601927685Z level=debug msg="Skipping migration: Already executed" id="drop temp_user_tmp_qwerty"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601930895Z level=debug msg="Skipping migration: Already executed" id="Set created for temp users that will otherwise prematurely expire"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601932439Z level=debug msg="Skipping migration: Already executed" id="create star table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601933983Z level=debug msg="Skipping migration: Already executed" id="add unique index star.user_id_dashboard_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60193541Z level=debug msg="Skipping migration: Already executed" id="create org table v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601936871Z level=debug msg="Skipping migration: Already executed" id="create index UQE_org_name - v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601939703Z level=debug msg="Skipping migration: Already executed" id="create org_user table v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601941093Z level=debug msg="Skipping migration: Already executed" id="create index IDX_org_user_org_id - v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60194254Z level=debug msg="Skipping migration: Already executed" id="create index UQE_org_user_org_id_user_id - v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601943975Z level=debug msg="Skipping migration: Already executed" id="create index IDX_org_user_user_id - v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601945548Z level=debug msg="Skipping migration: Already executed" id="Update org table charset"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601947087Z level=debug msg="Skipping migration: Already executed" id="Update org_user table charset"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601949396Z level=debug msg="Skipping migration: Already executed" id="Migrate all Read Only Viewers to Viewers"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601951202Z level=debug msg="Skipping migration: Already executed" id="create dashboard table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601952619Z level=debug msg="Skipping migration: Already executed" id="add index dashboard.account_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601953982Z level=debug msg="Skipping migration: Already executed" id="add unique index dashboard_account_id_slug"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601959274Z level=debug msg="Skipping migration: Already executed" id="create dashboard_tag table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601960762Z level=debug msg="Skipping migration: Already executed" id="add unique index dashboard_tag.dasboard_id_term"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60196213Z level=debug msg="Skipping migration: Already executed" id="drop index UQE_dashboard_tag_dashboard_id_term - v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601964864Z level=debug msg="Skipping migration: Already executed" id="Rename table dashboard to dashboard_v1 - v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601969164Z level=debug msg="Skipping migration: Already executed" id="create dashboard v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601982044Z level=debug msg="Skipping migration: Already executed" id="create index IDX_dashboard_org_id - v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601984005Z level=debug msg="Skipping migration: Already executed" id="create index UQE_dashboard_org_id_slug - v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601985692Z level=debug msg="Skipping migration: Already executed" id="copy dashboard v1 to v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601987262Z level=debug msg="Skipping migration: Already executed" id="drop table dashboard_v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601989326Z level=debug msg="Skipping migration: Already executed" id="alter dashboard.data to mediumtext v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601991604Z level=debug msg="Skipping migration: Already executed" id="Add column updated_by in dashboard - v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601992955Z level=debug msg="Skipping migration: Already executed" id="Add column created_by in dashboard - v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601994377Z level=debug msg="Skipping migration: Already executed" id="Add column gnetId in dashboard"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601996777Z level=debug msg="Skipping migration: Already executed" id="Add index for gnetId in dashboard"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601998352Z level=debug msg="Skipping migration: Already executed" id="Add column plugin_id in dashboard"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.601999708Z level=debug msg="Skipping migration: Already executed" id="Add index for plugin_id in dashboard"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602002493Z level=debug msg="Skipping migration: Already executed" id="Add index for dashboard_id in dashboard_tag"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602004454Z level=debug msg="Skipping migration: Already executed" id="Update dashboard table charset"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602006475Z level=debug msg="Skipping migration: Already executed" id="Update dashboard_tag table charset"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602008383Z level=debug msg="Skipping migration: Already executed" id="Add column folder_id in dashboard"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60201012Z level=debug msg="Skipping migration: Already executed" id="Add column isFolder in dashboard"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602011722Z level=debug msg="Skipping migration: Already executed" id="Add column has_acl in dashboard"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602013635Z level=debug msg="Skipping migration: Already executed" id="Add column uid in dashboard"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60201539Z level=debug msg="Skipping migration: Already executed" id="Update uid column values in dashboard"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602017021Z level=debug msg="Skipping migration: Already executed" id="Add unique index dashboard_org_id_uid"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60201919Z level=debug msg="Skipping migration: Already executed" id="Remove unique index org_id_slug"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602020751Z level=debug msg="Skipping migration: Already executed" id="Update dashboard title length"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602022903Z level=debug msg="Skipping migration: Already executed" id="Add unique index for dashboard_org_id_title_folder_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602024848Z level=debug msg="Skipping migration: Already executed" id="create dashboard_provisioning"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602027149Z level=debug msg="Skipping migration: Already executed" id="Rename table dashboard_provisioning to dashboard_provisioning_tmp_qwerty - v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602028715Z level=debug msg="Skipping migration: Already executed" id="create dashboard_provisioning v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602033692Z level=debug msg="Skipping migration: Already executed" id="create index IDX_dashboard_provisioning_dashboard_id - v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602035355Z level=debug msg="Skipping migration: Already executed" id="create index IDX_dashboard_provisioning_dashboard_id_name - v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602036911Z level=debug msg="Skipping migration: Already executed" id="copy dashboard_provisioning v1 to v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602038585Z level=debug msg="Skipping migration: Already executed" id="drop dashboard_provisioning_tmp_qwerty"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60204039Z level=debug msg="Skipping migration: Already executed" id="Add check_sum column"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602045237Z level=debug msg="Skipping migration: Already executed" id="Add index for dashboard_title"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602058816Z level=debug msg="Skipping migration: Already executed" id="delete tags for deleted dashboards"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602061226Z level=debug msg="Skipping migration: Already executed" id="delete stars for deleted dashboards"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602063014Z level=debug msg="Skipping migration: Already executed" id="Add index for dashboard_is_folder"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602065693Z level=debug msg="Skipping migration: Already executed" id="Add isPublic for dashboard"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602067586Z level=debug msg="Skipping migration: Already executed" id="create data_source table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602069429Z level=debug msg="Skipping migration: Already executed" id="add index data_source.account_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602071852Z level=debug msg="Skipping migration: Already executed" id="add unique index data_source.account_id_name"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602073307Z level=debug msg="Skipping migration: Already executed" id="drop index IDX_data_source_account_id - v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60207496Z level=debug msg="Skipping migration: Already executed" id="drop index UQE_data_source_account_id_name - v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60207659Z level=debug msg="Skipping migration: Already executed" id="Rename table data_source to data_source_v1 - v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602078267Z level=debug msg="Skipping migration: Already executed" id="create data_source table v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602079738Z level=debug msg="Skipping migration: Already executed" id="create index IDX_data_source_org_id - v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60208124Z level=debug msg="Skipping migration: Already executed" id="create index UQE_data_source_org_id_name - v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602083098Z level=debug msg="Skipping migration: Already executed" id="Drop old table data_source_v1 #2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602084621Z level=debug msg="Skipping migration: Already executed" id="Add column with_credentials"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602086004Z level=debug msg="Skipping migration: Already executed" id="Add secure json data column"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602088149Z level=debug msg="Skipping migration: Already executed" id="Update data_source table charset"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602089896Z level=debug msg="Skipping migration: Already executed" id="Update initial version to 1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602091567Z level=debug msg="Skipping migration: Already executed" id="Add read_only data column"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602120996Z level=debug msg="Skipping migration: Already executed" id="Migrate logging ds to loki ds"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602123415Z level=debug msg="Skipping migration: Already executed" id="Update json_data with nulls"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602125842Z level=debug msg="Skipping migration: Already executed" id="Add uid column"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602127763Z level=debug msg="Skipping migration: Already executed" id="Update uid value"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602129701Z level=debug msg="Skipping migration: Already executed" id="Add unique index datasource_org_id_uid"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602131512Z level=debug msg="Skipping migration: Already executed" id="add unique index datasource_org_id_is_default"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602133037Z level=debug msg="Skipping migration: Already executed" id="create api_key table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602134604Z level=debug msg="Skipping migration: Already executed" id="add index api_key.account_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602136097Z level=debug msg="Skipping migration: Already executed" id="add index api_key.key"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602137733Z level=debug msg="Skipping migration: Already executed" id="add index api_key.account_id_name"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602139467Z level=debug msg="Skipping migration: Already executed" id="drop index IDX_api_key_account_id - v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60214113Z level=debug msg="Skipping migration: Already executed" id="drop index UQE_api_key_key - v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602142641Z level=debug msg="Skipping migration: Already executed" id="drop index UQE_api_key_account_id_name - v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602144186Z level=debug msg="Skipping migration: Already executed" id="Rename table api_key to api_key_v1 - v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602145488Z level=debug msg="Skipping migration: Already executed" id="create api_key table v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602147786Z level=debug msg="Skipping migration: Already executed" id="create index IDX_api_key_org_id - v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602149315Z level=debug msg="Skipping migration: Already executed" id="create index UQE_api_key_key - v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.6021515Z level=debug msg="Skipping migration: Already executed" id="create index UQE_api_key_org_id_name - v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602153151Z level=debug msg="Skipping migration: Already executed" id="copy api_key v1 to v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602154854Z level=debug msg="Skipping migration: Already executed" id="Drop old table api_key_v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602156894Z level=debug msg="Skipping migration: Already executed" id="Update api_key table charset"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602159328Z level=debug msg="Skipping migration: Already executed" id="Add expires to api_key table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602160769Z level=debug msg="Skipping migration: Already executed" id="Add service account foreign key"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602162251Z level=debug msg="Skipping migration: Already executed" id="set service account foreign key to nil if 0"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602163673Z level=debug msg="Skipping migration: Already executed" id="Add last_used_at to api_key table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602165116Z level=debug msg="Skipping migration: Already executed" id="Add is_revoked column to api_key table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602168957Z level=debug msg="Skipping migration: Already executed" id="create dashboard_snapshot table v4"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602170638Z level=debug msg="Skipping migration: Already executed" id="drop table dashboard_snapshot_v4 #1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602172388Z level=debug msg="Skipping migration: Already executed" id="create dashboard_snapshot table v5 #2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602173925Z level=debug msg="Skipping migration: Already executed" id="create index UQE_dashboard_snapshot_key - v5"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602175729Z level=debug msg="Skipping migration: Already executed" id="create index UQE_dashboard_snapshot_delete_key - v5"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602179099Z level=debug msg="Skipping migration: Already executed" id="create index IDX_dashboard_snapshot_user_id - v5"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602189505Z level=debug msg="Skipping migration: Already executed" id="alter dashboard_snapshot to mediumtext v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602206775Z level=debug msg="Skipping migration: Already executed" id="Update dashboard_snapshot table charset"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602209617Z level=debug msg="Skipping migration: Already executed" id="Add column external_delete_url to dashboard_snapshots table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602212027Z level=debug msg="Skipping migration: Already executed" id="Add encrypted dashboard json column"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60221407Z level=debug msg="Skipping migration: Already executed" id="Change dashboard_encrypted column to MEDIUMBLOB"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602215949Z level=debug msg="Skipping migration: Already executed" id="create quota table v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602217697Z level=debug msg="Skipping migration: Already executed" id="create index UQE_quota_org_id_user_id_target - v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60221962Z level=debug msg="Skipping migration: Already executed" id="Update quota table charset"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602221177Z level=debug msg="Skipping migration: Already executed" id="create plugin_setting table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602223047Z level=debug msg="Skipping migration: Already executed" id="create index UQE_plugin_setting_org_id_plugin_id - v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602224688Z level=debug msg="Skipping migration: Already executed" id="Add column plugin_version to plugin_settings"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602227364Z level=debug msg="Skipping migration: Already executed" id="Update plugin_setting table charset"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602237067Z level=debug msg="Skipping migration: Already executed" id="create session table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602239481Z level=debug msg="Skipping migration: Already executed" id="Drop old table playlist table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602241942Z level=debug msg="Skipping migration: Already executed" id="Drop old table playlist_item table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602244284Z level=debug msg="Skipping migration: Already executed" id="create playlist table v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60224588Z level=debug msg="Skipping migration: Already executed" id="create playlist item table v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602247976Z level=debug msg="Skipping migration: Already executed" id="Update playlist table charset"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602249626Z level=debug msg="Skipping migration: Already executed" id="Update playlist_item table charset"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602253709Z level=debug msg="Skipping migration: Already executed" id="drop preferences table v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60225537Z level=debug msg="Skipping migration: Already executed" id="drop preferences table v3"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60225719Z level=debug msg="Skipping migration: Already executed" id="create preferences table v3"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602258702Z level=debug msg="Skipping migration: Already executed" id="Update preferences table charset"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602261644Z level=debug msg="Skipping migration: Already executed" id="Add column team_id in preferences"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602263342Z level=debug msg="Skipping migration: Already executed" id="Update team_id column values in preferences"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602264846Z level=debug msg="Skipping migration: Already executed" id="Add column week_start in preferences"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602266234Z level=debug msg="Skipping migration: Already executed" id="Add column preferences.json_data"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602267666Z level=debug msg="Skipping migration: Already executed" id="alter preferences.json_data to mediumtext v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602269219Z level=debug msg="Skipping migration: Already executed" id="Add preferences index org_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602270985Z level=debug msg="Skipping migration: Already executed" id="Add preferences index user_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602275732Z level=debug msg="Skipping migration: Already executed" id="create alert table v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602285372Z level=debug msg="Skipping migration: Already executed" id="add index alert org_id & id "
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602287748Z level=debug msg="Skipping migration: Already executed" id="add index alert state"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602289803Z level=debug msg="Skipping migration: Already executed" id="add index alert dashboard_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602291861Z level=debug msg="Skipping migration: Already executed" id="Create alert_rule_tag table v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602294031Z level=debug msg="Skipping migration: Already executed" id="Add unique index alert_rule_tag.alert_id_tag_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60229561Z level=debug msg="Skipping migration: Already executed" id="drop index UQE_alert_rule_tag_alert_id_tag_id - v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602297436Z level=debug msg="Skipping migration: Already executed" id="Rename table alert_rule_tag to alert_rule_tag_v1 - v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602300255Z level=debug msg="Skipping migration: Already executed" id="Create alert_rule_tag table v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602302276Z level=debug msg="Skipping migration: Already executed" id="create index UQE_alert_rule_tag_alert_id_tag_id - Add unique index alert_rule_tag.alert_id_tag_id V2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60230423Z level=debug msg="Skipping migration: Already executed" id="copy alert_rule_tag v1 to v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602315761Z level=debug msg="Skipping migration: Already executed" id="drop table alert_rule_tag_v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602318163Z level=debug msg="Skipping migration: Already executed" id="create alert_notification table v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602320553Z level=debug msg="Skipping migration: Already executed" id="Add column is_default"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602323404Z level=debug msg="Skipping migration: Already executed" id="Add column frequency"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602327427Z level=debug msg="Skipping migration: Already executed" id="Add column send_reminder"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602329398Z level=debug msg="Skipping migration: Already executed" id="Add column disable_resolve_message"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602331147Z level=debug msg="Skipping migration: Already executed" id="add index alert_notification org_id & name"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602332988Z level=debug msg="Skipping migration: Already executed" id="Update alert table charset"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602334628Z level=debug msg="Skipping migration: Already executed" id="Update alert_notification table charset"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602338202Z level=debug msg="Skipping migration: Already executed" id="create notification_journal table v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602348295Z level=debug msg="Skipping migration: Already executed" id="add index notification_journal org_id & alert_id & notifier_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602350963Z level=debug msg="Skipping migration: Already executed" id="drop alert_notification_journal"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602354545Z level=debug msg="Skipping migration: Already executed" id="create alert_notification_state table v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602356804Z level=debug msg="Skipping migration: Already executed" id="add index alert_notification_state org_id & alert_id & notifier_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602358449Z level=debug msg="Skipping migration: Already executed" id="Add for to alert table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602359905Z level=debug msg="Skipping migration: Already executed" id="Add column uid in alert_notification"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602361612Z level=debug msg="Skipping migration: Already executed" id="Update uid column values in alert_notification"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602363221Z level=debug msg="Skipping migration: Already executed" id="Add unique index alert_notification_org_id_uid"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602365328Z level=debug msg="Skipping migration: Already executed" id="Remove unique index org_id_name"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602375165Z level=debug msg="Skipping migration: Already executed" id="Add column secure_settings in alert_notification"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602377641Z level=debug msg="Skipping migration: Already executed" id="alter alert.settings to mediumtext"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602380372Z level=debug msg="Skipping migration: Already executed" id="Add non-unique index alert_notification_state_alert_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602382986Z level=debug msg="Skipping migration: Already executed" id="Add non-unique index alert_rule_tag_alert_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602385002Z level=debug msg="Skipping migration: Already executed" id="Drop old annotation table v4"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602386814Z level=debug msg="Skipping migration: Already executed" id="create annotation table v5"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602388466Z level=debug msg="Skipping migration: Already executed" id="add index annotation 0 v3"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60238999Z level=debug msg="Skipping migration: Already executed" id="add index annotation 1 v3"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602391655Z level=debug msg="Skipping migration: Already executed" id="add index annotation 2 v3"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602393189Z level=debug msg="Skipping migration: Already executed" id="add index annotation 3 v3"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602403932Z level=debug msg="Skipping migration: Already executed" id="add index annotation 4 v3"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60240673Z level=debug msg="Skipping migration: Already executed" id="Update annotation table charset"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602409307Z level=debug msg="Skipping migration: Already executed" id="Add column region_id to annotation table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602411326Z level=debug msg="Skipping migration: Already executed" id="Drop category_id index"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602413456Z level=debug msg="Skipping migration: Already executed" id="Add column tags to annotation table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602414976Z level=debug msg="Skipping migration: Already executed" id="Create annotation_tag table v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602416628Z level=debug msg="Skipping migration: Already executed" id="Add unique index annotation_tag.annotation_id_tag_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602418365Z level=debug msg="Skipping migration: Already executed" id="drop index UQE_annotation_tag_annotation_id_tag_id - v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602420024Z level=debug msg="Skipping migration: Already executed" id="Rename table annotation_tag to annotation_tag_v2 - v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602421684Z level=debug msg="Skipping migration: Already executed" id="Create annotation_tag table v3"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602423382Z level=debug msg="Skipping migration: Already executed" id="create index UQE_annotation_tag_annotation_id_tag_id - Add unique index annotation_tag.annotation_id_tag_id V3"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602425664Z level=debug msg="Skipping migration: Already executed" id="copy annotation_tag v2 to v3"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602436103Z level=debug msg="Skipping migration: Already executed" id="drop table annotation_tag_v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60243845Z level=debug msg="Skipping migration: Already executed" id="Update alert annotations and set TEXT to empty"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602440997Z level=debug msg="Skipping migration: Already executed" id="Add created time to annotation table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60244324Z level=debug msg="Skipping migration: Already executed" id="Add updated time to annotation table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602467823Z level=debug msg="Skipping migration: Already executed" id="Add index for created in annotation table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602470984Z level=debug msg="Skipping migration: Already executed" id="Add index for updated in annotation table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602473219Z level=debug msg="Skipping migration: Already executed" id="Convert existing annotations from seconds to milliseconds"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602475168Z level=debug msg="Skipping migration: Already executed" id="Add epoch_end column"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602477218Z level=debug msg="Skipping migration: Already executed" id="Add index for epoch_end"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602478887Z level=debug msg="Skipping migration: Already executed" id="Make epoch_end the same as epoch"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602481229Z level=debug msg="Skipping migration: Already executed" id="Move region to single row"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602482833Z level=debug msg="Skipping migration: Already executed" id="Remove index org_id_epoch from annotation table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602484724Z level=debug msg="Skipping migration: Already executed" id="Remove index org_id_dashboard_id_panel_id_epoch from annotation table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602486687Z level=debug msg="Skipping migration: Already executed" id="Add index for org_id_dashboard_id_epoch_end_epoch on annotation table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60249132Z level=debug msg="Skipping migration: Already executed" id="Add index for org_id_epoch_end_epoch on annotation table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602493154Z level=debug msg="Skipping migration: Already executed" id="Remove index org_id_epoch_epoch_end from annotation table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602497013Z level=debug msg="Skipping migration: Already executed" id="Add index for alert_id on annotation table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602499418Z level=debug msg="Skipping migration: Already executed" id="Increase tags column to length 4096"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602501303Z level=debug msg="Skipping migration: Already executed" id="create test_data table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60250503Z level=debug msg="Skipping migration: Already executed" id="create dashboard_version table v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602516088Z level=debug msg="Skipping migration: Already executed" id="add index dashboard_version.dashboard_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602520774Z level=debug msg="Skipping migration: Already executed" id="add unique index dashboard_version.dashboard_id and dashboard_version.version"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602523264Z level=debug msg="Skipping migration: Already executed" id="Set dashboard version to 1 where 0"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602525429Z level=debug msg="Skipping migration: Already executed" id="save existing dashboard data in dashboard_version table v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60252713Z level=debug msg="Skipping migration: Already executed" id="alter dashboard_version.data to mediumtext v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602529001Z level=debug msg="Skipping migration: Already executed" id="create team table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602530516Z level=debug msg="Skipping migration: Already executed" id="add index team.org_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602532036Z level=debug msg="Skipping migration: Already executed" id="add unique index team_org_id_name"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602533375Z level=debug msg="Skipping migration: Already executed" id="create team member table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602534866Z level=debug msg="Skipping migration: Already executed" id="add index team_member.org_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60253662Z level=debug msg="Skipping migration: Already executed" id="add unique index team_member_org_id_team_id_user_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602538577Z level=debug msg="Skipping migration: Already executed" id="add index team_member.team_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60254021Z level=debug msg="Skipping migration: Already executed" id="Add column email to team table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60254207Z level=debug msg="Skipping migration: Already executed" id="Add column external to team_member table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602543584Z level=debug msg="Skipping migration: Already executed" id="Add column permission to team_member table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602545189Z level=debug msg="Skipping migration: Already executed" id="create dashboard acl table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602546749Z level=debug msg="Skipping migration: Already executed" id="add index dashboard_acl_dashboard_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602548253Z level=debug msg="Skipping migration: Already executed" id="add unique index dashboard_acl_dashboard_id_user_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602549842Z level=debug msg="Skipping migration: Already executed" id="add unique index dashboard_acl_dashboard_id_team_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60256193Z level=debug msg="Skipping migration: Already executed" id="add index dashboard_acl_user_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602564201Z level=debug msg="Skipping migration: Already executed" id="add index dashboard_acl_team_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602566338Z level=debug msg="Skipping migration: Already executed" id="add index dashboard_acl_org_id_role"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60256854Z level=debug msg="Skipping migration: Already executed" id="add index dashboard_permission"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602570795Z level=debug msg="Skipping migration: Already executed" id="save default acl rules in dashboard_acl table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602573012Z level=debug msg="Skipping migration: Already executed" id="delete acl rules for deleted dashboards and folders"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602574836Z level=debug msg="Skipping migration: Already executed" id="create tag table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602576425Z level=debug msg="Skipping migration: Already executed" id="add index tag.key_value"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60257821Z level=debug msg="Skipping migration: Already executed" id="create login attempt table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602579873Z level=debug msg="Skipping migration: Already executed" id="add index login_attempt.username"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602581651Z level=debug msg="Skipping migration: Already executed" id="drop index IDX_login_attempt_username - v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60258343Z level=debug msg="Skipping migration: Already executed" id="Rename table login_attempt to login_attempt_tmp_qwerty - v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602587292Z level=debug msg="Skipping migration: Already executed" id="create login_attempt v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602590264Z level=debug msg="Skipping migration: Already executed" id="create index IDX_login_attempt_username - v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602592132Z level=debug msg="Skipping migration: Already executed" id="copy login_attempt v1 to v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602593858Z level=debug msg="Skipping migration: Already executed" id="drop login_attempt_tmp_qwerty"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602595539Z level=debug msg="Skipping migration: Already executed" id="create user auth table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602597072Z level=debug msg="Skipping migration: Already executed" id="create index IDX_user_auth_auth_module_auth_id - v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602598822Z level=debug msg="Skipping migration: Already executed" id="alter user_auth.auth_id to length 190"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602601552Z level=debug msg="Skipping migration: Already executed" id="Add OAuth access token to user_auth"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602603223Z level=debug msg="Skipping migration: Already executed" id="Add OAuth refresh token to user_auth"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602604704Z level=debug msg="Skipping migration: Already executed" id="Add OAuth token type to user_auth"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602606241Z level=debug msg="Skipping migration: Already executed" id="Add OAuth expiry to user_auth"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602607621Z level=debug msg="Skipping migration: Already executed" id="Add index to user_id column in user_auth"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602609265Z level=debug msg="Skipping migration: Already executed" id="Add OAuth ID token to user_auth"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602610816Z level=debug msg="Skipping migration: Already executed" id="create server_lock table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602616923Z level=debug msg="Skipping migration: Already executed" id="add index server_lock.operation_uid"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602618282Z level=debug msg="Skipping migration: Already executed" id="create user auth token table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602619922Z level=debug msg="Skipping migration: Already executed" id="add unique index user_auth_token.auth_token"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602621619Z level=debug msg="Skipping migration: Already executed" id="add unique index user_auth_token.prev_auth_token"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602623111Z level=debug msg="Skipping migration: Already executed" id="add index user_auth_token.user_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602626501Z level=debug msg="Skipping migration: Already executed" id="Add revoked_at to the user auth token"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.6026368Z level=debug msg="Skipping migration: Already executed" id="create cache_data table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602639176Z level=debug msg="Skipping migration: Already executed" id="add unique index cache_data.cache_key"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602641564Z level=debug msg="Skipping migration: Already executed" id="create short_url table v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602643496Z level=debug msg="Skipping migration: Already executed" id="add index short_url.org_id-uid"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602645446Z level=debug msg="Skipping migration: Already executed" id="alter table short_url alter column created_by type to bigint"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602648572Z level=debug msg="Skipping migration: Already executed" id="delete alert_definition table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602650449Z level=debug msg="Skipping migration: Already executed" id="recreate alert_definition table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602652043Z level=debug msg="Skipping migration: Already executed" id="add index in alert_definition on org_id and title columns"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60265418Z level=debug msg="Skipping migration: Already executed" id="add index in alert_definition on org_id and uid columns"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602664143Z level=debug msg="Skipping migration: Already executed" id="alter alert_definition table data column to mediumtext in mysql"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602666655Z level=debug msg="Skipping migration: Already executed" id="drop index in alert_definition on org_id and title columns"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602671477Z level=debug msg="Skipping migration: Already executed" id="drop index in alert_definition on org_id and uid columns"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602673804Z level=debug msg="Skipping migration: Already executed" id="add unique index in alert_definition on org_id and title columns"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602675759Z level=debug msg="Skipping migration: Already executed" id="add unique index in alert_definition on org_id and uid columns"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602677278Z level=debug msg="Skipping migration: Already executed" id="Add column paused in alert_definition"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602679241Z level=debug msg="Skipping migration: Already executed" id="drop alert_definition table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602681184Z level=debug msg="Skipping migration: Already executed" id="delete alert_definition_version table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602683133Z level=debug msg="Skipping migration: Already executed" id="recreate alert_definition_version table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602694012Z level=debug msg="Skipping migration: Already executed" id="add index in alert_definition_version table on alert_definition_id and version columns"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602698675Z level=debug msg="Skipping migration: Already executed" id="add index in alert_definition_version table on alert_definition_uid and version columns"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602701764Z level=debug msg="Skipping migration: Already executed" id="alter alert_definition_version table data column to mediumtext in mysql"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602703963Z level=debug msg="Skipping migration: Already executed" id="drop alert_definition_version table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602705922Z level=debug msg="Skipping migration: Already executed" id="create alert_instance table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602707696Z level=debug msg="Skipping migration: Already executed" id="add index in alert_instance table on def_org_id, def_uid and current_state columns"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602710261Z level=debug msg="Skipping migration: Already executed" id="add index in alert_instance table on def_org_id, current_state columns"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602719953Z level=debug msg="Skipping migration: Already executed" id="add column current_state_end to alert_instance"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602722742Z level=debug msg="Skipping migration: Already executed" id="remove index def_org_id, def_uid, current_state on alert_instance"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60272686Z level=debug msg="Skipping migration: Already executed" id="remove index def_org_id, current_state on alert_instance"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602729031Z level=debug msg="Skipping migration: Already executed" id="rename def_org_id to rule_org_id in alert_instance"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602730957Z level=debug msg="Skipping migration: Already executed" id="rename def_uid to rule_uid in alert_instance"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602732494Z level=debug msg="Skipping migration: Already executed" id="add index rule_org_id, rule_uid, current_state on alert_instance"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602734151Z level=debug msg="Skipping migration: Already executed" id="add index rule_org_id, current_state on alert_instance"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602736036Z level=debug msg="Skipping migration: Already executed" id="add current_reason column related to current_state"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602737655Z level=debug msg="Skipping migration: Already executed" id="create alert_rule table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602739101Z level=debug msg="Skipping migration: Already executed" id="add index in alert_rule on org_id and title columns"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602741255Z level=debug msg="Skipping migration: Already executed" id="add index in alert_rule on org_id and uid columns"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602751789Z level=debug msg="Skipping migration: Already executed" id="add index in alert_rule on org_id, namespace_uid, group_uid columns"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602754316Z level=debug msg="Skipping migration: Already executed" id="alter alert_rule table data column to mediumtext in mysql"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602756713Z level=debug msg="Skipping migration: Already executed" id="add column for to alert_rule"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602758611Z level=debug msg="Skipping migration: Already executed" id="add column annotations to alert_rule"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602760319Z level=debug msg="Skipping migration: Already executed" id="add column labels to alert_rule"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602762225Z level=debug msg="Skipping migration: Already executed" id="remove unique index from alert_rule on org_id, title columns"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602763852Z level=debug msg="Skipping migration: Already executed" id="add index in alert_rule on org_id, namespase_uid and title columns"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602767494Z level=debug msg="Skipping migration: Already executed" id="add dashboard_uid column to alert_rule"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602777124Z level=debug msg="Skipping migration: Already executed" id="add panel_id column to alert_rule"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602782194Z level=debug msg="Skipping migration: Already executed" id="add index in alert_rule on org_id, dashboard_uid and panel_id columns"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602784508Z level=debug msg="Skipping migration: Already executed" id="add rule_group_idx column to alert_rule"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602786588Z level=debug msg="Skipping migration: Already executed" id="add is_paused column to alert_rule table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602788693Z level=debug msg="Skipping migration: Already executed" id="fix is_paused column for alert_rule table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602790368Z level=debug msg="Skipping migration: Already executed" id="create alert_rule_version table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602793339Z level=debug msg="Skipping migration: Already executed" id="add index in alert_rule_version table on rule_org_id, rule_uid and version columns"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602803426Z level=debug msg="Skipping migration: Already executed" id="add index in alert_rule_version table on rule_org_id, rule_namespace_uid and rule_group columns"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602806267Z level=debug msg="Skipping migration: Already executed" id="alter alert_rule_version table data column to mediumtext in mysql"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602808515Z level=debug msg="Skipping migration: Already executed" id="add column for to alert_rule_version"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602810608Z level=debug msg="Skipping migration: Already executed" id="add column annotations to alert_rule_version"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602812697Z level=debug msg="Skipping migration: Already executed" id="add column labels to alert_rule_version"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602814883Z level=debug msg="Skipping migration: Already executed" id="add rule_group_idx column to alert_rule_version"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602816368Z level=debug msg="Skipping migration: Already executed" id="add is_paused column to alert_rule_versions table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602818565Z level=debug msg="Skipping migration: Already executed" id="fix is_paused column for alert_rule_version table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602821959Z level=debug msg="Skipping migration: Already executed" id=create_alert_configuration_table
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602832023Z level=debug msg="Skipping migration: Already executed" id="Add column default in alert_configuration"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60283461Z level=debug msg="Skipping migration: Already executed" id="alert alert_configuration alertmanager_configuration column from TEXT to MEDIUMTEXT if mysql"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602837343Z level=debug msg="Skipping migration: Already executed" id="add column org_id in alert_configuration"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602839398Z level=debug msg="Skipping migration: Already executed" id="add index in alert_configuration table on org_id column"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602841491Z level=debug msg="Skipping migration: Already executed" id="add configuration_hash column to alert_configuration"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602842991Z level=debug msg="Skipping migration: Already executed" id=create_ngalert_configuration_table
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602844411Z level=debug msg="Skipping migration: Already executed" id="add index in ngalert_configuration on org_id column"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602846123Z level=debug msg="Skipping migration: Already executed" id="add column send_alerts_to in ngalert_configuration"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602848028Z level=debug msg="Skipping migration: Already executed" id="create provenance_type table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602849701Z level=debug msg="Skipping migration: Already executed" id="add index to uniquify (record_key, record_type, org_id) columns"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60286122Z level=debug msg="Skipping migration: Already executed" id="create alert_image table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602863566Z level=debug msg="Skipping migration: Already executed" id="add unique index on token to alert_image table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60286616Z level=debug msg="Skipping migration: Already executed" id="support longer URLs in alert_image table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602868127Z level=debug msg="Skipping migration: Already executed" id=create_alert_configuration_history_table
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602870379Z level=debug msg="Skipping migration: Already executed" id="drop non-unique orgID index on alert_configuration"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602876367Z level=debug msg="Skipping migration: Already executed" id="drop unique orgID index on alert_configuration if exists"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602887018Z level=debug msg="Skipping migration: Already executed" id="extract alertmanager configuration history to separate table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602889388Z level=debug msg="Skipping migration: Already executed" id="add unique index on orgID to alert_configuration"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602891466Z level=debug msg="Skipping migration: Already executed" id="add last_applied column to alert_configuration_history"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602893539Z level=debug msg="Skipping migration: Already executed" id="create library_element table v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602895572Z level=debug msg="Skipping migration: Already executed" id="add index library_element org_id-folder_id-name-kind"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602897251Z level=debug msg="Skipping migration: Already executed" id="create library_element_connection table v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602898911Z level=debug msg="Skipping migration: Already executed" id="add index library_element_connection element_id-kind-connection_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602900538Z level=debug msg="Skipping migration: Already executed" id="add unique index library_element org_id_uid"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602902794Z level=debug msg="Skipping migration: Already executed" id="increase max description length to 2048"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60290603Z level=debug msg="Skipping migration: Already executed" id="alter library_element model to mediumtext"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602908511Z level=debug msg="Skipping migration: Already executed" id="create data_keys table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602910397Z level=debug msg="Skipping migration: Already executed" id="create secrets table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602912739Z level=debug msg="Skipping migration: Already executed" id="rename data_keys name column to id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602914392Z level=debug msg="Skipping migration: Already executed" id="add name column into data_keys"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602916204Z level=debug msg="Skipping migration: Already executed" id="copy data_keys id column values into name"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602919088Z level=debug msg="Skipping migration: Already executed" id="rename data_keys name column to label"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60292952Z level=debug msg="Skipping migration: Already executed" id="rename data_keys id column back to name"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602932012Z level=debug msg="Skipping migration: Already executed" id="create kv_store table v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60293434Z level=debug msg="Skipping migration: Already executed" id="add index kv_store.org_id-namespace-key"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.602937214Z level=debug msg="Skipping migration: Already executed" id="create permission table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603022009Z level=debug msg="Skipping migration: Already executed" id="add unique index permission.role_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603058727Z level=debug msg="Skipping migration: Already executed" id="add unique index role_id_action_scope"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60310122Z level=debug msg="Skipping migration: Already executed" id="create role table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603106439Z level=debug msg="Skipping migration: Already executed" id="add column display_name"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603109426Z level=debug msg="Skipping migration: Already executed" id="add column group_name"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603124451Z level=debug msg="Skipping migration: Already executed" id="add index role.org_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603138841Z level=debug msg="Skipping migration: Already executed" id="add unique index role_org_id_name"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603146001Z level=debug msg="Skipping migration: Already executed" id="add index role_org_id_uid"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603148704Z level=debug msg="Skipping migration: Already executed" id="create team role table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603161778Z level=debug msg="Skipping migration: Already executed" id="add index team_role.org_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603165439Z level=debug msg="Skipping migration: Already executed" id="add unique index team_role_org_id_team_id_role_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603181012Z level=debug msg="Skipping migration: Already executed" id="add index team_role.team_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603184037Z level=debug msg="Skipping migration: Already executed" id="create user role table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603186564Z level=debug msg="Skipping migration: Already executed" id="add index user_role.org_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603188972Z level=debug msg="Skipping migration: Already executed" id="add unique index user_role_org_id_user_id_role_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603190996Z level=debug msg="Skipping migration: Already executed" id="add index user_role.user_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603193658Z level=debug msg="Skipping migration: Already executed" id="create builtin role table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603198434Z level=debug msg="Skipping migration: Already executed" id="add index builtin_role.role_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603200913Z level=debug msg="Skipping migration: Already executed" id="add index builtin_role.name"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60320351Z level=debug msg="Skipping migration: Already executed" id="Add column org_id to builtin_role table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603206107Z level=debug msg="Skipping migration: Already executed" id="add index builtin_role.org_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603208459Z level=debug msg="Skipping migration: Already executed" id="add unique index builtin_role_org_id_role_id_role"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603211597Z level=debug msg="Skipping migration: Already executed" id="Remove unique index role_org_id_uid"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603214107Z level=debug msg="Skipping migration: Already executed" id="add unique index role.uid"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603216683Z level=debug msg="Skipping migration: Already executed" id="create seed assignment table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603232871Z level=debug msg="Skipping migration: Already executed" id="add unique index builtin_role_role_name"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603235931Z level=debug msg="Skipping migration: Already executed" id="add column hidden to role table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60324057Z level=debug msg="Skipping migration: Already executed" id="create query_history table v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603243979Z level=debug msg="Skipping migration: Already executed" id="add index query_history.org_id-created_by-datasource_uid"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603247298Z level=debug msg="Skipping migration: Already executed" id="alter table query_history alter column created_by type to bigint"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603251398Z level=debug msg="Skipping migration: Already executed" id="rbac disabled migrator"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603255263Z level=debug msg="Skipping migration: Already executed" id="teams permissions migration"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603258241Z level=debug msg="Skipping migration: Already executed" id="dashboard permissions"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603261201Z level=debug msg="Skipping migration: Already executed" id="dashboard permissions uid scopes"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603276129Z level=debug msg="Skipping migration: Already executed" id="drop managed folder create actions"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603279971Z level=debug msg="Skipping migration: Already executed" id="alerting notification permissions"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603283282Z level=debug msg="Skipping migration: Already executed" id="create query_history_star table v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603290236Z level=debug msg="Skipping migration: Already executed" id="add index query_history.user_id-query_uid"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603304688Z level=debug msg="Skipping migration: Already executed" id="add column org_id in query_history_star"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603308502Z level=debug msg="Skipping migration: Already executed" id="alter table query_history_star_mig column user_id type to bigint"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603322476Z level=debug msg="Skipping migration: Already executed" id="create correlation table v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603326036Z level=debug msg="Skipping migration: Already executed" id="add index correlations.uid"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603328942Z level=debug msg="Skipping migration: Already executed" id="add index correlations.source_uid"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603334804Z level=debug msg="Skipping migration: Already executed" id="add correlation config column"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603337637Z level=debug msg="Skipping migration: Already executed" id="create entity_events table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603340121Z level=debug msg="Skipping migration: Already executed" id="create dashboard public config v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603355438Z level=debug msg="Skipping migration: Already executed" id="drop index UQE_dashboard_public_config_uid - v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603358975Z level=debug msg="Skipping migration: Already executed" id="drop index IDX_dashboard_public_config_org_id_dashboard_uid - v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603363019Z level=debug msg="Skipping migration: Already executed" id="Drop old dashboard public config table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603366363Z level=debug msg="Skipping migration: Already executed" id="recreate dashboard public config v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603369241Z level=debug msg="Skipping migration: Already executed" id="create index UQE_dashboard_public_config_uid - v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603376328Z level=debug msg="Skipping migration: Already executed" id="create index IDX_dashboard_public_config_org_id_dashboard_uid - v1"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603379247Z level=debug msg="Skipping migration: Already executed" id="drop index UQE_dashboard_public_config_uid - v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603381735Z level=debug msg="Skipping migration: Already executed" id="drop index IDX_dashboard_public_config_org_id_dashboard_uid - v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603384391Z level=debug msg="Skipping migration: Already executed" id="Drop public config table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603387067Z level=debug msg="Skipping migration: Already executed" id="Recreate dashboard public config v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603391754Z level=debug msg="Skipping migration: Already executed" id="create index UQE_dashboard_public_config_uid - v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603407849Z level=debug msg="Skipping migration: Already executed" id="create index IDX_dashboard_public_config_org_id_dashboard_uid - v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603411158Z level=debug msg="Skipping migration: Already executed" id="create index UQE_dashboard_public_config_access_token - v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603415658Z level=debug msg="Skipping migration: Already executed" id="Rename table dashboard_public_config to dashboard_public - v2"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603429175Z level=debug msg="Skipping migration: Already executed" id="add annotations_enabled column"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60343202Z level=debug msg="Skipping migration: Already executed" id="add time_selection_enabled column"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603435493Z level=debug msg="Skipping migration: Already executed" id="delete orphaned public dashboards"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60343868Z level=debug msg="Skipping migration: Already executed" id="add share column"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603441623Z level=debug msg="Skipping migration: Already executed" id="backfill empty share column fields with default of public"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60344443Z level=debug msg="Skipping migration: Already executed" id="create default alerting folders"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603447336Z level=debug msg="Skipping migration: Already executed" id="create file table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603461936Z level=debug msg="Skipping migration: Already executed" id="file table idx: path natural pk"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603465782Z level=debug msg="Skipping migration: Already executed" id="file table idx: parent_folder_path_hash fast folder retrieval"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603469427Z level=debug msg="Skipping migration: Already executed" id="create file_meta table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603472738Z level=debug msg="Skipping migration: Already executed" id="file table idx: path key"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603475916Z level=debug msg="Skipping migration: Already executed" id="set path collation in file table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603479351Z level=debug msg="Skipping migration: Already executed" id="managed permissions migration"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603482057Z level=debug msg="Skipping migration: Already executed" id="managed folder permissions alert actions migration"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603484922Z level=debug msg="Skipping migration: Already executed" id="RBAC action name migrator"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603490484Z level=debug msg="Skipping migration: Already executed" id="Add UID column to playlist"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603507566Z level=debug msg="Skipping migration: Already executed" id="Update uid column values in playlist"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603511443Z level=debug msg="Skipping migration: Already executed" id="Add index for uid in playlist"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603515339Z level=debug msg="Skipping migration: Already executed" id="update group index for alert rules"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603518982Z level=debug msg="Skipping migration: Already executed" id="managed folder permissions alert actions repeated migration"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603522557Z level=debug msg="Skipping migration: Already executed" id="admin only folder/dashboard permission"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603525587Z level=debug msg="Skipping migration: Already executed" id="add action column to seed_assignment"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603530038Z level=debug msg="Skipping migration: Already executed" id="add scope column to seed_assignment"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603533129Z level=debug msg="Skipping migration: Already executed" id="remove unique index builtin_role_role_name before nullable update"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603536115Z level=debug msg="Skipping migration: Already executed" id="update seed_assignment role_name column to nullable"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603538977Z level=debug msg="Skipping migration: Already executed" id="add unique index builtin_role_name back"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603541915Z level=debug msg="Skipping migration: Already executed" id="add unique index builtin_role_action_scope"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.60354465Z level=debug msg="Skipping migration: Already executed" id="add primary key to seed_assigment"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603548842Z level=debug msg="Skipping migration: Already executed" id="managed folder permissions alert actions repeated fixed migration"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603552403Z level=debug msg="Skipping migration: Already executed" id="migrate external alertmanagers to datsourcse"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603566958Z level=debug msg="Skipping migration: Already executed" id="create folder table"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603572801Z level=debug msg="Skipping migration: Already executed" id="Add index for parent_uid"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603578199Z level=debug msg="Skipping migration: Already executed" id="Add unique index for folder.uid and folder.org_id"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603581648Z level=debug msg="Skipping migration: Already executed" id="Update folder title length"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603585073Z level=debug msg="Skipping migration: Already executed" id="Add unique index for folder.title and folder.parent_uid"
+grafana-1  | logger=migrator t=2025-06-25T22:04:34.603606077Z level=info msg="migrations completed" performed=0 skipped=485 duration=1.779696ms
+grafana-1  | logger=sqlstore t=2025-06-25T22:04:34.603982669Z level=debug msg="Ensuring main org and admin user exist"
+grafana-1  | logger=secrets t=2025-06-25T22:04:34.604319664Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+grafana-1  | logger=tsdb.cloudwatch t=2025-06-25T22:04:34.611503774Z level=debug msg=Initializing
+grafana-1  | logger=tsdb.elasticsearch t=2025-06-25T22:04:34.611613419Z level=debug msg=Initializing
+grafana-1  | logger=tsdb.prometheus t=2025-06-25T22:04:34.61165211Z level=debug msg=initializing
+grafana-1  | logger=accesscontrol t=2025-06-25T22:04:34.611854317Z level=debug msg="adding scope attribute resolver" prefix=folders:name:
+grafana-1  | logger=accesscontrol t=2025-06-25T22:04:34.611881119Z level=debug msg="adding scope attribute resolver" prefix=folders:id:
+grafana-1  | logger=accesscontrol t=2025-06-25T22:04:34.611884991Z level=debug msg="adding scope attribute resolver" prefix=folders:uid:
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.665690047Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/datasource/alertmanager/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.666325853Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/datasource/azuremonitor/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.666643987Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/datasource/cloud-monitoring/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.666978424Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/datasource/cloudwatch/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.667271053Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/datasource/dashboard/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.667545005Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/datasource/elasticsearch/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.667813078Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/datasource/grafana/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.668068258Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/datasource/graphite/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.668268132Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/datasource/influxdb/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.668601362Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/datasource/jaeger/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.668820675Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/datasource/loki/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.66902177Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/datasource/mixed/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.66925487Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/datasource/mssql/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.66945678Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/datasource/mysql/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.669698963Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/datasource/opentsdb/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.669929822Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/datasource/parca/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.670135666Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/datasource/phlare/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.670374675Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/datasource/postgres/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.670599915Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/datasource/prometheus/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.670883041Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/datasource/tempo/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.671137091Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/datasource/testdata/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.671426092Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/datasource/zipkin/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.671679885Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/panel/alertGroups/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.671889814Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/panel/alertlist/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.672071052Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/panel/annolist/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.672267405Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/panel/barchart/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.672472434Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/panel/bargauge/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.672684238Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/panel/candlestick/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.672866084Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/panel/canvas/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.673051496Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/panel/dashlist/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.673263495Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/panel/datagrid/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.673437997Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/panel/debug/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.673582713Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/panel/flamegraph/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.673739217Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/panel/gauge/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.673907083Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/panel/geomap/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.67412219Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/panel/gettingstarted/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.674314179Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/panel/graph/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.67450747Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/panel/heatmap/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.674685075Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/panel/histogram/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.674877739Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/panel/icon/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.675066177Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/panel/live/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.675257706Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/panel/logs/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.675430795Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/panel/news/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.675644708Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/panel/nodeGraph/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.675839407Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/panel/piechart/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.676061556Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/panel/stat/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.676277196Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/panel/state-timeline/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.676440658Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/panel/status-history/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.676589081Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/panel/table/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.676744679Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/panel/table-old/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.676899501Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/panel/text/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.677128357Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/panel/timeseries/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.677336306Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/panel/traces/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.677591264Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/panel/trend/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.677806349Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/panel/welcome/plugin.json
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.67799904Z level=debug msg="Loading plugin" path=/usr/share/grafana/public/app/plugins/panel/xychart/plugin.json
+grafana-1  | logger=plugin.influxdb t=2025-06-25T22:04:34.687087394Z level=debug msg="Successfully started backend plugin process"
+grafana-1  | logger=plugin.phlare t=2025-06-25T22:04:34.687133019Z level=debug msg="Successfully started backend plugin process"
+grafana-1  | logger=plugin.testdata t=2025-06-25T22:04:34.687135877Z level=debug msg="Successfully started backend plugin process"
+grafana-1  | logger=plugin.graphite t=2025-06-25T22:04:34.687137741Z level=debug msg="Successfully started backend plugin process"
+grafana-1  | logger=plugin.tempo t=2025-06-25T22:04:34.687140501Z level=debug msg="Successfully started backend plugin process"
+grafana-1  | logger=plugin.grafana-azure-monitor-datasource t=2025-06-25T22:04:34.687142125Z level=debug msg="Successfully started backend plugin process"
+grafana-1  | logger=plugin.loki t=2025-06-25T22:04:34.687144283Z level=debug msg="Successfully started backend plugin process"
+grafana-1  | logger=plugin.postgres t=2025-06-25T22:04:34.687145545Z level=debug msg="Successfully started backend plugin process"
+grafana-1  | logger=plugin.grafana t=2025-06-25T22:04:34.687147007Z level=debug msg="Successfully started backend plugin process"
+grafana-1  | logger=plugin.mysql t=2025-06-25T22:04:34.687148473Z level=debug msg="Successfully started backend plugin process"
+grafana-1  | logger=plugin.stackdriver t=2025-06-25T22:04:34.687151419Z level=debug msg="Successfully started backend plugin process"
+grafana-1  | logger=plugin.parca t=2025-06-25T22:04:34.68715408Z level=debug msg="Successfully started backend plugin process"
+grafana-1  | logger=plugin.prometheus t=2025-06-25T22:04:34.687155568Z level=debug msg="Successfully started backend plugin process"
+grafana-1  | logger=plugin.elasticsearch t=2025-06-25T22:04:34.687159845Z level=debug msg="Successfully started backend plugin process"
+grafana-1  | logger=plugin.opentsdb t=2025-06-25T22:04:34.687161763Z level=debug msg="Successfully started backend plugin process"
+grafana-1  | logger=plugin.mssql t=2025-06-25T22:04:34.687163114Z level=debug msg="Successfully started backend plugin process"
+grafana-1  | logger=plugin.cloudwatch t=2025-06-25T22:04:34.687165412Z level=debug msg="Successfully started backend plugin process"
+grafana-1  | logger=local.finder t=2025-06-25T22:04:34.687199633Z level=warn msg="Skipping finding plugins as directory does not exist" path=/usr/share/grafana/plugins-bundled
+grafana-1  | logger=secrets.kvstore t=2025-06-25T22:04:34.68742848Z level=debug msg="secrets manager evaluator returned false" reason="remote secret management plugin disabled because the property `secrets.use_plugin` is not set to `true`"
+grafana-1  | logger=secrets.kvstore t=2025-06-25T22:04:34.68744599Z level=debug msg="secrets kvstore is using the default (SQL) implementation for secrets management"
+grafana-1  | logger=accesscontrol t=2025-06-25T22:04:34.687484992Z level=debug msg="adding scope attribute resolver" prefix=datasources:name:
+grafana-1  | logger=accesscontrol t=2025-06-25T22:04:34.687496952Z level=debug msg="adding scope attribute resolver" prefix=datasources:id:
+grafana-1  | logger=accesscontrol t=2025-06-25T22:04:34.692286225Z level=debug msg="adding scope attribute resolver" prefix=dashboards:id:
+grafana-1  | logger=accesscontrol t=2025-06-25T22:04:34.692342767Z level=debug msg="adding scope attribute resolver" prefix=dashboards:uid:
+grafana-1  | logger=query_data t=2025-06-25T22:04:34.692539789Z level=info msg="Query Service initialization"
+grafana-1  | logger=live t=2025-06-25T22:04:34.692553993Z level=debug msg="GrafanaLive initialization" ha=false
+grafana-1  | logger=live.push_http t=2025-06-25T22:04:34.694344191Z level=info msg="Live Push Gateway initialization"
+grafana-1  | logger=ngalert.multiorg.alertmanager t=2025-06-25T22:04:34.694607027Z level=debug msg="synchronizing Alertmanagers for orgs"
+grafana-1  | logger=infra.kvstore.sql t=2025-06-25T22:04:34.695050213Z level=debug msg="got kvstore value" orgId=1 namespace=alertmanager key=notifications value=
+grafana-1  | logger=infra.kvstore.sql t=2025-06-25T22:04:34.695188485Z level=debug msg="got kvstore value" orgId=1 namespace=alertmanager key=silences value=
+grafana-1  | logger=ngalert.multiorg.alertmanager t=2025-06-25T22:04:34.703203084Z level=debug msg="done synchronizing Alertmanagers for orgs"
+grafana-1  | logger=ngalert.sender.router t=2025-06-25T22:04:34.703298895Z level=debug msg="Attempting to sync admin configs" count=0
+grafana-1  | logger=ngalert.sender.router t=2025-06-25T22:04:34.703305355Z level=debug msg="Finish of admin configuration sync"
+grafana-1  | logger=accesscontrol t=2025-06-25T22:04:35.54495869Z level=debug msg="adding scope attribute resolver" prefix=annotations:id:
+grafana-1  | logger=plugindashboards t=2025-06-25T22:04:35.545172545Z level=debug msg="Looking for app dashboard updates"
+grafana-1  | logger=infra.usagestats.collector t=2025-06-25T22:04:35.545458068Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+grafana-1  | logger=provisioning.datasources t=2025-06-25T22:04:35.552656806Z level=debug msg="updating datasource from configuration" name=Prometheus uid=prometheus
+grafana-1  | logger=sqlstore.session t=2025-06-25T22:04:35.552881401Z level=debug msg="reusing existing session" transaction=true
+grafana-1  | logger=sqlstore.session t=2025-06-25T22:04:35.553349946Z level=debug msg="reusing existing session" transaction=true
+grafana-1  | logger=sqlstore.session t=2025-06-25T22:04:35.553966234Z level=debug msg="reusing existing session" transaction=true
+grafana-1  | logger=secrets.kvstore t=2025-06-25T22:04:35.561213513Z level=debug msg="got secret value" orgId=1 type=datasource namespace=Prometheus
+grafana-1  | logger=sqlstore.session t=2025-06-25T22:04:35.561307353Z level=debug msg="reusing existing session" transaction=true
+grafana-1  | logger=sqlstore.session t=2025-06-25T22:04:35.565224393Z level=debug msg="reusing existing session" transaction=true
+grafana-1  | logger=secrets.kvstore t=2025-06-25T22:04:35.565593028Z level=debug msg="secret value updated" orgId=1 type=datasource namespace=Prometheus
+grafana-1  | logger=sqlstore.transactions t=2025-06-25T22:04:35.565617443Z level=debug msg="skip committing the transaction because it belongs to a session created in the outer scope"
+grafana-1  | logger=sqlstore.transactions t=2025-06-25T22:04:35.565626595Z level=debug msg="skip committing the transaction because it belongs to a session created in the outer scope"
+grafana-1  | logger=provisioning.plugins t=2025-06-25T22:04:35.569860838Z level=debug msg="Looking for plugin provisioning files" path=/etc/grafana/provisioning/plugins
+grafana-1  | logger=provisioning.plugins t=2025-06-25T22:04:35.5701905Z level=debug msg="Validating plugins"
+grafana-1  | logger=provisioning.notifiers t=2025-06-25T22:04:35.570221235Z level=debug msg="Looking for alert notification provisioning files" path=/etc/grafana/provisioning/notifiers
+grafana-1  | logger=provisioning.notifiers t=2025-06-25T22:04:35.570396203Z level=debug msg="Validating alert notifications"
+grafana-1  | logger=provisioning.alerting t=2025-06-25T22:04:35.570422286Z level=debug msg="looking for alerting provisioning files" path=/etc/grafana/provisioning/alerting
+grafana-1  | logger=provisioning.alerting t=2025-06-25T22:04:35.570581001Z level=info msg="starting to provision alerting"
+grafana-1  | logger=provisioning.alerting t=2025-06-25T22:04:35.570594975Z level=debug msg="read all alerting files" file_count=0
+grafana-1  | logger=provisioning.alerting t=2025-06-25T22:04:35.570603935Z level=info msg="finished to provision alerting"
+grafana-1  | logger=server t=2025-06-25T22:04:35.570742182Z level=debug msg="Starting background service" service=*ngalert.AlertNG
+grafana-1  | logger=server t=2025-06-25T22:04:35.570727148Z level=debug msg="Starting background service" service=*notifications.NotificationService
+grafana-1  | logger=ngalert t=2025-06-25T22:04:35.570788946Z level=debug msg=Starting
+grafana-1  | logger=ngalert.state.manager t=2025-06-25T22:04:35.570797613Z level=info msg="Warming state cache for startup"
+grafana-1  | logger=server t=2025-06-25T22:04:35.57072152Z level=debug msg="NOTIFY_SOCKET environment variable empty or unset, can't send systemd notification"
+grafana-1  | logger=server t=2025-06-25T22:04:35.570817131Z level=debug msg="Waiting on services..."
+grafana-1  | logger=modules t=2025-06-25T22:04:35.570804372Z level=warn msg="No modules registered..."
+grafana-1  | logger=server t=2025-06-25T22:04:35.570832028Z level=debug msg="Starting background service" service=*updatechecker.PluginsService
+grafana-1  | logger=server t=2025-06-25T22:04:35.570855363Z level=debug msg="Starting background service" service=*manager.SecretsService
+grafana-1  | logger=server t=2025-06-25T22:04:35.570792264Z level=debug msg="Starting background service" service=*cleanup.CleanUpService
+grafana-1  | logger=plugins.update.checker t=2025-06-25T22:04:35.570887854Z level=debug msg="Checking for updates"
+grafana-1  | logger=server t=2025-06-25T22:04:35.570941292Z level=debug msg="Starting background service" service=*process.Manager
+grafana-1  | logger=server t=2025-06-25T22:04:35.570971922Z level=debug msg="Starting background service" service=*migrations.SecretMigrationProviderImpl
+grafana-1  | logger=server t=2025-06-25T22:04:35.570946127Z level=debug msg="Starting background service" service=*authinfoservice.Implementation
+grafana-1  | logger=server t=2025-06-25T22:04:35.570948722Z level=debug msg="Starting background service" service=*service.UsageStats
+grafana-1  | logger=login.authinfo t=2025-06-25T22:04:35.570997549Z level=debug msg="Started AuthInfo Metrics collection service"
+grafana-1  | logger=server t=2025-06-25T22:04:35.570846858Z level=debug msg="Starting background service" service=*remotecache.RemoteCache
+grafana-1  | logger=server t=2025-06-25T22:04:35.570817353Z level=debug msg="Starting background service" service=*api.HTTPServer
+grafana-1  | logger=server t=2025-06-25T22:04:35.571024137Z level=debug msg="Starting background service" service=*store.dummyEntityEventsService
+grafana-1  | logger=server t=2025-06-25T22:04:35.571024982Z level=debug msg="Starting background service" service=*manager.ServiceAccountsService
+grafana-1  | logger=server t=2025-06-25T22:04:35.571032712Z level=debug msg="Stopped background service" service=*store.dummyEntityEventsService reason=null
+grafana-1  | logger=server t=2025-06-25T22:04:35.571013774Z level=debug msg="Starting background service" service=*store.standardStorageService
+grafana-1  | logger=server t=2025-06-25T22:04:35.570989167Z level=debug msg="Starting background service" service=*loginattemptimpl.Service
+grafana-1  | logger=server t=2025-06-25T22:04:35.571041544Z level=debug msg="Starting background service" service=*authimpl.UserAuthTokenService
+grafana-1  | logger=server t=2025-06-25T22:04:35.571017287Z level=debug msg="Starting background service" service=*live.GrafanaLive
+grafana-1  | logger=infra.lockservice t=2025-06-25T22:04:35.571070365Z level=debug msg="Start LockAndExecute" actionName="cleanup expired auth tokens"
+grafana-1  | logger=server t=2025-06-25T22:04:35.571038325Z level=debug msg="Starting background service" service=*pushhttp.Gateway
+grafana-1  | logger=cleanup t=2025-06-25T22:04:35.570950712Z level=debug msg="Found old rendered file to delete" folder=/var/lib/grafana/png deleted=0 kept=0
+grafana-1  | logger=server t=2025-06-25T22:04:35.571021772Z level=debug msg="Starting background service" service=*supportbundlesimpl.Service
+grafana-1  | logger=ngalert.state.manager t=2025-06-25T22:04:35.571122323Z level=info msg="State cache has been initialized" states=0 duration=321.701µs
+grafana-1  | logger=server t=2025-06-25T22:04:35.571066175Z level=debug msg="Starting background service" service=*provisioning.ProvisioningServiceImpl
+grafana-1  | logger=grafanaStorageLogger t=2025-06-25T22:04:35.571045538Z level=info msg="storage starting"
+grafana-1  | logger=server t=2025-06-25T22:04:35.570824051Z level=debug msg="Starting background service" service=*metric.Service
+grafana-1  | logger=cleanup t=2025-06-25T22:04:35.571162323Z level=debug msg="Found old rendered file to delete" folder=/var/lib/grafana/csv deleted=0 kept=0
+grafana-1  | logger=server t=2025-06-25T22:04:35.571170834Z level=debug msg="Stopped background service" service=*store.standardStorageService reason=null
+grafana-1  | logger=server t=2025-06-25T22:04:35.571026255Z level=debug msg="Starting background service" service=*statscollector.Service
+grafana-1  | logger=server t=2025-06-25T22:04:35.571060308Z level=debug msg="Starting background service" service=*rendering.RenderingService
+grafana-1  | logger=server t=2025-06-25T22:04:35.571034423Z level=debug msg="Starting background service" service=*tracing.Opentelemetry
+grafana-1  | logger=serviceaccounts.background t=2025-06-25T22:04:35.571035399Z level=debug msg="service initialized"
+grafana-1  | logger=server t=2025-06-25T22:04:35.571053876Z level=debug msg="Starting background service" service=*metrics.InternalMetricsService
+grafana-1  | logger=server t=2025-06-25T22:04:35.571059957Z level=debug msg="Starting background service" service=*updatechecker.GrafanaService
+grafana-1  | logger=grafana.update.checker t=2025-06-25T22:04:35.57128409Z level=debug msg="Checking for updates"
+grafana-1  | logger=ticker t=2025-06-25T22:04:35.571255876Z level=info msg=starting first_tick=2025-06-25T22:04:40Z
+grafana-1  | logger=rendering t=2025-06-25T22:04:35.571225311Z level=debug msg="No image renderer found/installed. For image rendering support please install the grafana-image-renderer plugin. Read more at https://grafana.com/docs/grafana/latest/administration/image_rendering/"
+grafana-1  | logger=ngalert.multiorg.alertmanager t=2025-06-25T22:04:35.571236268Z level=info msg="starting MultiOrg Alertmanager"
+grafana-1  | logger=infra.lockservice t=2025-06-25T22:04:35.570982883Z level=debug msg="Start LockExecuteAndRelease" actionName="secret migration task "
+grafana-1  | logger=http.server t=2025-06-25T22:04:35.574934688Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+grafana-1  | logger=infra.kvstore.sql t=2025-06-25T22:04:35.593704822Z level=debug msg="kvstore value not found" orgId=0 namespace=infra.usagestats key=last_sent
+grafana-1  | logger=infra.lockservice t=2025-06-25T22:04:35.597078879Z level=debug msg="Start execution" actionName="secret migration task "
+grafana-1  | logger=secret.migration t=2025-06-25T22:04:35.597114564Z level=debug msg="Starting secret migration service" service=*migrations.DataSourceSecretMigrationService
+grafana-1  | logger=infra.kvstore.sql t=2025-06-25T22:04:35.59740011Z level=debug msg="got kvstore value" orgId=0 namespace=datasource key=secretMigrationStatus value=compatible
+grafana-1  | logger=secret.migration t=2025-06-25T22:04:35.597426037Z level=debug msg="secret migration status is compatible"
+grafana-1  | logger=secret.migration t=2025-06-25T22:04:35.597432533Z level=debug msg="Finished secret migration service" service=*migrations.DataSourceSecretMigrationService
+grafana-1  | logger=secret.migration t=2025-06-25T22:04:35.597436273Z level=debug msg="Starting secret migration service" service=*migrations.MigrateToPluginService
+grafana-1  | logger=secret.migration t=2025-06-25T22:04:35.597475361Z level=debug msg="Finished secret migration service" service=*migrations.MigrateToPluginService
+grafana-1  | logger=infra.lockservice t=2025-06-25T22:04:35.597485974Z level=debug msg="Execution finished" actionName="secret migration task " duration=418.41µs
+grafana-1  | logger=infra.lockservice t=2025-06-25T22:04:35.604255976Z level=debug msg="LockExecuteAndRelease finished" actionName="secret migration task " duration=33.262095ms
+grafana-1  | logger=server t=2025-06-25T22:04:35.604316653Z level=debug msg="Stopped background service" service=*migrations.SecretMigrationProviderImpl reason=null
+grafana-1  | logger=plugins.update.checker t=2025-06-25T22:04:35.775535125Z level=info msg="Update check succeeded" duration=204.663549ms
+grafana-1  | logger=grafana.update.checker t=2025-06-25T22:04:35.82552187Z level=info msg="Update check succeeded" duration=254.235887ms
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:04:36.905178693Z level=debug msg="fetch permissions from store" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:04:36.90546131Z level=debug msg="cache permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=context userId=1 orgId=1 uname=admin t=2025-06-25T22:04:36.905642408Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=1 duration=1.004445ms size=0 referer= handler=/api/live/ws
+grafana-1  | logger=live t=2025-06-25T22:04:36.907259292Z level=debug msg="Client connected" user=1 client=23abcf2e-1e49-4cb1-97f1-348ab95ff977
+grafana-1  | logger=ngalert.scheduler t=2025-06-25T22:04:40.001200224Z level=debug msg="Alert rules fetched" rulesCount=0 foldersCount=0 updatedRules=0
+grafana-1  | logger=ngalert.scheduler t=2025-06-25T22:04:50.001240311Z level=debug msg="Alert rules fetched" rulesCount=0 foldersCount=0 updatedRules=0
+grafana-1  | logger=ngalert.state.manager t=2025-06-25T22:04:50.571594948Z level=debug msg="Recording state cache metrics" now=2025-06-25T22:04:50.57158247Z
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:04:59.321025127Z level=debug msg="fetch permissions from store" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:04:59.321330486Z level=debug msg="cache permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.evaluator t=2025-06-25T22:04:59.322213529Z level=debug msg="matched scope" userscope=settings:* targetscope=settings:*
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:04:59.322241107Z level=debug msg="fetch permissions from store" key=rbac-permissions-0-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:04:59.322473594Z level=debug msg="cache permissions" key=rbac-permissions-0-user-1
+grafana-1  | logger=accesscontrol.evaluator t=2025-06-25T22:04:59.32250247Z level=debug msg="matched scope" userscope=settings:* targetscope=settings:*
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:04:59.322566932Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=live t=2025-06-25T22:04:59.327114122Z level=debug msg="Client disconnected" user=1 client=23abcf2e-1e49-4cb1-97f1-348ab95ff977 reason="connection closed" elapsed=22.4225507s
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:04:59.726611299Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=context userId=1 orgId=1 uname=admin t=2025-06-25T22:04:59.726762547Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=0 duration=636.978µs size=0 referer= handler=/api/live/ws
+grafana-1  | logger=live t=2025-06-25T22:04:59.747252117Z level=debug msg="Client connected" user=1 client=a1f27e99-7f12-43df-ace8-8f44dde7f525
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:04:59.859338759Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:04:59.896318322Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:04:59.904978205Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:04:59.905094447Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=avatar t=2025-06-25T22:04:59.90511729Z level=debug msg="avatar.fetch(fetch new avatar)" url=https://secure.gravatar.com/avatar/46d229b033af06a191ff2267bca9ae56?
+grafana-1  | logger=avatar t=2025-06-25T22:04:59.905162316Z level=debug msg="Fetching avatar url with parameters" url="https://secure.gravatar.com/avatar/46d229b033af06a191ff2267bca9ae56?d=retro&r=pg&size=200"
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:04:59.934640049Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:04:59.934640185Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:04:59.934783059Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:04:59.939303233Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:04:59.939940266Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:04:59.942348895Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=ngalert.scheduler t=2025-06-25T22:05:00.001402843Z level=debug msg="Alert rules fetched" rulesCount=0 foldersCount=0 updatedRules=0
+grafana-1  | logger=avatar t=2025-06-25T22:05:00.093622577Z level=debug msg="Fetching avatar url with parameters" url="https://secure.gravatar.com/avatar/46d229b033af06a191ff2267bca9ae56?d=404"
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:05:05.460649965Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:05:05.463304222Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:05:05.46518357Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=ngalert.state.manager t=2025-06-25T22:05:05.569378408Z level=debug msg="Recording state cache metrics" now=2025-06-25T22:05:05.569369458Z
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:05:08.653027063Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:05:08.685041322Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:05:08.685124019Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:05:08.686381713Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:05:08.68877123Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:05:08.691373873Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:05:08.699650765Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:05:09.727375053Z level=debug msg="fetch permissions from store" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:05:09.727905784Z level=debug msg="cache permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=ngalert.scheduler t=2025-06-25T22:05:10.001688481Z level=debug msg="Alert rules fetched" rulesCount=0 foldersCount=0 updatedRules=0
+grafana-1  | logger=live t=2025-06-25T22:05:19.961309891Z level=debug msg="Client disconnected" user=1 client=a1f27e99-7f12-43df-ace8-8f44dde7f525 reason="connection closed" elapsed=20.214013829s
+grafana-1  | logger=ngalert.scheduler t=2025-06-25T22:05:20.001331035Z level=debug msg="Alert rules fetched" rulesCount=0 foldersCount=0 updatedRules=0
+grafana-1  | logger=ngalert.state.manager t=2025-06-25T22:05:20.569192917Z level=debug msg="Recording state cache metrics" now=2025-06-25T22:05:20.569184563Z
+grafana-1  | logger=ngalert.scheduler t=2025-06-25T22:05:30.001311932Z level=debug msg="Alert rules fetched" rulesCount=0 foldersCount=0 updatedRules=0
+grafana-1  | logger=secrets t=2025-06-25T22:05:35.566518479Z level=debug msg="Removing expired data keys from cache..."
+grafana-1  | logger=secrets t=2025-06-25T22:05:35.566668834Z level=debug msg="Removing expired data keys from cache finished successfully"
+grafana-1  | logger=ngalert.multiorg.alertmanager t=2025-06-25T22:05:35.56667943Z level=debug msg="synchronizing Alertmanagers for orgs"
+grafana-1  | logger=ngalert.state.manager t=2025-06-25T22:05:35.566718087Z level=debug msg="Recording state cache metrics" now=2025-06-25T22:05:35.566703371Z
+grafana-1  | logger=ngalert.sender.router t=2025-06-25T22:05:35.569895403Z level=debug msg="Attempting to sync admin configs" count=0
+grafana-1  | logger=ngalert.sender.router t=2025-06-25T22:05:35.569988133Z level=debug msg="Finish of admin configuration sync"
+grafana-1  | logger=alertmanager org=1 t=2025-06-25T22:05:35.572435669Z level=debug msg="neither config nor template have changed, skipping configuration sync."
+grafana-1  | logger=ngalert.multiorg.alertmanager t=2025-06-25T22:05:35.574467231Z level=debug msg="done synchronizing Alertmanagers for orgs"
+grafana-1  | logger=ngalert.scheduler t=2025-06-25T22:05:40.001666631Z level=debug msg="Alert rules fetched" rulesCount=0 foldersCount=0 updatedRules=0
+grafana-1  | logger=ngalert.scheduler t=2025-06-25T22:05:50.001634339Z level=debug msg="Alert rules fetched" rulesCount=0 foldersCount=0 updatedRules=0
+grafana-1  | logger=ngalert.state.manager t=2025-06-25T22:05:50.566102303Z level=debug msg="Recording state cache metrics" now=2025-06-25T22:05:50.566089759Z
+grafana-1  | logger=ngalert.scheduler t=2025-06-25T22:06:00.000993651Z level=debug msg="Alert rules fetched" rulesCount=0 foldersCount=0 updatedRules=0
+grafana-1  | logger=ngalert.state.manager t=2025-06-25T22:06:05.564821008Z level=debug msg="Recording state cache metrics" now=2025-06-25T22:06:05.564793325Z
+grafana-1  | logger=ngalert.scheduler t=2025-06-25T22:06:10.001062302Z level=debug msg="Alert rules fetched" rulesCount=0 foldersCount=0 updatedRules=0
+grafana-1  | logger=ngalert.scheduler t=2025-06-25T22:06:20.0008827Z level=debug msg="Alert rules fetched" rulesCount=0 foldersCount=0 updatedRules=0
+grafana-1  | logger=ngalert.state.manager t=2025-06-25T22:06:20.564786641Z level=debug msg="Recording state cache metrics" now=2025-06-25T22:06:20.564746664Z
+grafana-1  | logger=ngalert.scheduler t=2025-06-25T22:06:30.002379646Z level=debug msg="Alert rules fetched" rulesCount=0 foldersCount=0 updatedRules=0
+grafana-1  | logger=ngalert.state.manager t=2025-06-25T22:06:35.563549062Z level=debug msg="Recording state cache metrics" now=2025-06-25T22:06:35.563119666Z
+grafana-1  | logger=secrets t=2025-06-25T22:06:35.564591937Z level=debug msg="Removing expired data keys from cache..."
+grafana-1  | logger=secrets t=2025-06-25T22:06:35.564688057Z level=debug msg="Removing expired data keys from cache finished successfully"
+grafana-1  | logger=ngalert.sender.router t=2025-06-25T22:06:35.567208495Z level=debug msg="Attempting to sync admin configs" count=0
+grafana-1  | logger=ngalert.sender.router t=2025-06-25T22:06:35.567272267Z level=debug msg="Finish of admin configuration sync"
+grafana-1  | logger=ngalert.multiorg.alertmanager t=2025-06-25T22:06:35.570012674Z level=debug msg="synchronizing Alertmanagers for orgs"
+grafana-1  | logger=alertmanager org=1 t=2025-06-25T22:06:35.570567894Z level=debug msg="neither config nor template have changed, skipping configuration sync."
+grafana-1  | logger=ngalert.multiorg.alertmanager t=2025-06-25T22:06:35.570714196Z level=debug msg="done synchronizing Alertmanagers for orgs"
+grafana-1  | logger=ngalert.scheduler t=2025-06-25T22:06:40.001676968Z level=debug msg="Alert rules fetched" rulesCount=0 foldersCount=0 updatedRules=0
+grafana-1  | logger=ngalert.scheduler t=2025-06-25T22:06:50.00151532Z level=debug msg="Alert rules fetched" rulesCount=0 foldersCount=0 updatedRules=0
+grafana-1  | logger=ngalert.state.manager t=2025-06-25T22:06:50.561674458Z level=debug msg="Recording state cache metrics" now=2025-06-25T22:06:50.561646689Z
+grafana-1  | logger=ngalert.scheduler t=2025-06-25T22:07:00.001589882Z level=debug msg="Alert rules fetched" rulesCount=0 foldersCount=0 updatedRules=0
+grafana-1  | logger=ngalert.state.manager t=2025-06-25T22:07:05.56141294Z level=debug msg="Recording state cache metrics" now=2025-06-25T22:07:05.561362233Z
+grafana-1  | logger=ngalert.scheduler t=2025-06-25T22:07:10.004530134Z level=debug msg="Alert rules fetched" rulesCount=0 foldersCount=0 updatedRules=0
+grafana-1  | logger=ngalert.scheduler t=2025-06-25T22:07:20.001487922Z level=debug msg="Alert rules fetched" rulesCount=0 foldersCount=0 updatedRules=0
+grafana-1  | logger=ngalert.state.manager t=2025-06-25T22:07:20.56052733Z level=debug msg="Recording state cache metrics" now=2025-06-25T22:07:20.56050404Z
+grafana-1  | logger=ngalert.scheduler t=2025-06-25T22:07:30.001698164Z level=debug msg="Alert rules fetched" rulesCount=0 foldersCount=0 updatedRules=0
+grafana-1  | logger=context userId=1 orgId=1 uname=admin t=2025-06-25T22:07:35.256621919Z level=debug msg="Updating last user_seen_at" user_id=1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:35.264003263Z level=debug msg="fetch permissions from store" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:35.264766233Z level=debug msg="cache permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.evaluator t=2025-06-25T22:07:35.267233647Z level=debug msg="matched scope" userscope=settings:* targetscope=settings:*
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:35.267274872Z level=debug msg="fetch permissions from store" key=rbac-permissions-0-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:35.267737766Z level=debug msg="cache permissions" key=rbac-permissions-0-user-1
+grafana-1  | logger=accesscontrol.evaluator t=2025-06-25T22:07:35.267810056Z level=debug msg="matched scope" userscope=settings:* targetscope=settings:*
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:35.267941709Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=ngalert.state.manager t=2025-06-25T22:07:35.557369298Z level=debug msg="Recording state cache metrics" now=2025-06-25T22:07:35.557359914Z
+grafana-1  | logger=secrets t=2025-06-25T22:07:35.5574393Z level=debug msg="Removing expired data keys from cache..."
+grafana-1  | logger=secrets t=2025-06-25T22:07:35.557459395Z level=debug msg="Removing expired data keys from cache finished successfully"
+grafana-1  | logger=ngalert.sender.router t=2025-06-25T22:07:35.563822671Z level=debug msg="Attempting to sync admin configs" count=0
+grafana-1  | logger=ngalert.sender.router t=2025-06-25T22:07:35.563856782Z level=debug msg="Finish of admin configuration sync"
+grafana-1  | logger=ngalert.multiorg.alertmanager t=2025-06-25T22:07:35.567870096Z level=debug msg="synchronizing Alertmanagers for orgs"
+grafana-1  | logger=alertmanager org=1 t=2025-06-25T22:07:35.568284486Z level=debug msg="neither config nor template have changed, skipping configuration sync."
+grafana-1  | logger=ngalert.multiorg.alertmanager t=2025-06-25T22:07:35.568438214Z level=debug msg="done synchronizing Alertmanagers for orgs"
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:35.582193576Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=context userId=1 orgId=1 uname=admin t=2025-06-25T22:07:35.582361898Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=0 duration=723.271µs size=0 referer= handler=/api/live/ws
+grafana-1  | logger=live t=2025-06-25T22:07:35.598115808Z level=debug msg="Client connected" user=1 client=f87c5895-06a4-4278-833c-43c6576501a5
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:35.665739524Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:35.698932663Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:35.707329753Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:35.708995483Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:35.730783197Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:35.73078322Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:35.734308962Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:35.734547527Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:35.735648335Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:35.73633985Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:39.830215698Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:39.83040734Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:39.830693247Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=ngalert.scheduler t=2025-06-25T22:07:40.001357301Z level=debug msg="Alert rules fetched" rulesCount=0 foldersCount=0 updatedRules=0
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:44.87763829Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:45.586321605Z level=debug msg="fetch permissions from store" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:45.587189779Z level=debug msg="cache permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:47.153422325Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:48.049855859Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:48.358646423Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:48.360236715Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:48.676689969Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=ngalert.scheduler t=2025-06-25T22:07:50.000993554Z level=debug msg="Alert rules fetched" rulesCount=0 foldersCount=0 updatedRules=0
+grafana-1  | logger=ngalert.state.manager t=2025-06-25T22:07:50.557900971Z level=debug msg="Recording state cache metrics" now=2025-06-25T22:07:50.557871115Z
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:52.808704486Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.evaluator t=2025-06-25T22:07:52.810646379Z level=debug msg="matched scope" userscope=settings:* targetscope=settings:*
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:52.810683867Z level=debug msg="fetch permissions from store" key=rbac-permissions-0-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:52.811220255Z level=debug msg="cache permissions" key=rbac-permissions-0-user-1
+grafana-1  | logger=accesscontrol.evaluator t=2025-06-25T22:07:52.811273136Z level=debug msg="matched scope" userscope=settings:* targetscope=settings:*
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:52.811392203Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=live t=2025-06-25T22:07:52.817127942Z level=debug msg="Client disconnected" user=1 client=f87c5895-06a4-4278-833c-43c6576501a5 reason="connection closed" elapsed=17.221464046s
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:52.985849308Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=context userId=1 orgId=1 uname=admin t=2025-06-25T22:07:52.986018838Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=0 duration=647.157µs size=0 referer= handler=/api/live/ws
+grafana-1  | logger=live t=2025-06-25T22:07:53.001519887Z level=debug msg="Client connected" user=1 client=204bac63-a774-4986-b1bf-f45133b30353
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:53.041733797Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:53.044917633Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:53.050792592Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:53.055868826Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:53.349172328Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:53.352244825Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:53.633788813Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.evaluator t=2025-06-25T22:07:53.634801267Z level=debug msg="matched scope" userscope=settings:* targetscope=settings:*
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:53.634830126Z level=debug msg="using cached permissions" key=rbac-permissions-0-user-1
+grafana-1  | logger=accesscontrol.evaluator t=2025-06-25T22:07:53.63484799Z level=debug msg="matched scope" userscope=settings:* targetscope=settings:*
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:53.635195293Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=live t=2025-06-25T22:07:53.639464488Z level=debug msg="Client disconnected" user=1 client=204bac63-a774-4986-b1bf-f45133b30353 reason="connection closed" elapsed=637.883933ms
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:53.802685056Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=context userId=1 orgId=1 uname=admin t=2025-06-25T22:07:53.802843799Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=0 duration=707.511µs size=0 referer= handler=/api/live/ws
+grafana-1  | logger=live t=2025-06-25T22:07:53.817266303Z level=debug msg="Client connected" user=1 client=a3411039-45c1-4d9e-9709-638a934602b6
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:53.824188518Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.evaluator t=2025-06-25T22:07:53.825546958Z level=debug msg="matched scope" userscope=settings:* targetscope=settings:*
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:53.825589122Z level=debug msg="using cached permissions" key=rbac-permissions-0-user-1
+grafana-1  | logger=accesscontrol.evaluator t=2025-06-25T22:07:53.825616404Z level=debug msg="matched scope" userscope=settings:* targetscope=settings:*
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:53.825722585Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=live t=2025-06-25T22:07:53.831672353Z level=debug msg="Client disconnected" user=1 client=a3411039-45c1-4d9e-9709-638a934602b6 reason="connection closed" elapsed=14.354343ms
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:53.988539446Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=context userId=1 orgId=1 uname=admin t=2025-06-25T22:07:53.988729788Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=0 duration=733.493µs size=0 referer= handler=/api/live/ws
+grafana-1  | logger=live t=2025-06-25T22:07:54.003779121Z level=debug msg="Client connected" user=1 client=ee742025-d434-48ab-a899-561269d775d8
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:54.042676034Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:54.045927072Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:54.051446427Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:54.056191354Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:54.12763378Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.evaluator t=2025-06-25T22:07:54.12876055Z level=debug msg="matched scope" userscope=settings:* targetscope=settings:*
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:54.128785745Z level=debug msg="using cached permissions" key=rbac-permissions-0-user-1
+grafana-1  | logger=accesscontrol.evaluator t=2025-06-25T22:07:54.128803555Z level=debug msg="matched scope" userscope=settings:* targetscope=settings:*
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:54.128869191Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=live t=2025-06-25T22:07:54.134683986Z level=debug msg="Client disconnected" user=1 client=ee742025-d434-48ab-a899-561269d775d8 reason="connection closed" elapsed=130.853316ms
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:54.28394607Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=context userId=1 orgId=1 uname=admin t=2025-06-25T22:07:54.284190436Z level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=172.18.0.1 time_ms=0 duration=918.995µs size=0 referer= handler=/api/live/ws
+grafana-1  | logger=live t=2025-06-25T22:07:54.294544128Z level=debug msg="Client connected" user=1 client=7231e338-19e9-486f-9445-8577bde36808
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:54.338438295Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:54.341909947Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:54.348057152Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:54.35571441Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:54.6389389Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:54.6389389Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:54.945469241Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:55.841031793Z level=debug msg="fetch permissions from store" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:55.842468632Z level=debug msg="cache permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:55.879271367Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:55.879279001Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:55.880459029Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:55.881950436Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:55.882969234Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:07:55.884441156Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=ngalert.scheduler t=2025-06-25T22:08:00.00229212Z level=debug msg="Alert rules fetched" rulesCount=0 foldersCount=0 updatedRules=0
+grafana-1  | logger=accesscontrol.service t=2025-06-25T22:08:04.286501207Z level=debug msg="using cached permissions" key=rbac-permissions-1-user-1
+grafana-1  | logger=ngalert.state.manager t=2025-06-25T22:08:05.555145512Z level=debug msg="Recording state cache metrics" now=2025-06-25T22:08:05.555121824Z
+grafana-1  | logger=ngalert.scheduler t=2025-06-25T22:08:10.000808339Z level=debug msg="Alert rules fetched" rulesCount=0 foldersCount=0 updatedRules=0
+grafana-1  | logger=ngalert.scheduler t=2025-06-25T22:08:20.002579395Z level=debug msg="Alert rules fetched" rulesCount=0 foldersCount=0 updatedRules=0
+grafana-1  | logger=ngalert.state.manager t=2025-06-25T22:08:20.5545202Z level=debug msg="Recording state cache metrics" now=2025-06-25T22:08:20.554506183Z
+grafana-1  | logger=ngalert.scheduler t=2025-06-25T22:08:30.000630422Z level=debug msg="Alert rules fetched" rulesCount=0 foldersCount=0 updatedRules=0

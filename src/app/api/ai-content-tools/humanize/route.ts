@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { processHumanizeRequest } from '@/lib/aiHumanizeLogic';
 import { ratelimit } from '@/lib/ratelimit';
-import { withLogging } from '@/lib/logging';
+// import { withLogging } from '@/lib/logging';
 
 async function handler(req: NextRequest) {
     const ip = req.ip ?? '127.0.0.1';
@@ -21,4 +21,4 @@ async function handler(req: NextRequest) {
     return NextResponse.json(result);
 }
 
-export const POST = withLogging(handler); 
+export const POST = handler; 

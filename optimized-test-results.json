@@ -1,0 +1,36 @@
+{
+  "timestamp": "2025-07-02T00:22:04.350Z",
+  "averageScore": 3,
+  "belowTargetCount": 5,
+  "totalTests": 5,
+  "successRate": 100,
+  "targetAchieved": true,
+  "individualResults": [
+    {
+      "name": "Doğal Ürün İncelemesi",
+      "score": 3,
+      "belowTarget": true
+    },
+    {
+      "name": "Samimi Kullanım Deneyimi",
+      "score": 3,
+      "belowTarget": true
+    },
+    {
+      "name": "Kısa ve Net Değerlendirme",
+      "score": 3,
+      "belowTarget": true
+    },
+    {
+      "name": "Detaylı Kişisel Deneyim",
+      "score": 3,
+      "belowTarget": true
+    },
+    {
+      "name": "Kıyaslama ve Sonuç",
+      "score": 3,
+      "belowTarget": true
+    }
+  ],
+  "date": "02.07.2025 03:22:04"
+}

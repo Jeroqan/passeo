@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`buildHumanizePrompt oluşturulan prompt için bir snapshot ile eşleşmeli 1`] = `
+"Bir e-ticaret sitesinin teknik ürün içerik editörüsün. Sadece <rewrite> etiketleriyle işaretlenmiş alanları yeniden yazacaksın; cümlelerin yapısını değiştirip daha doğal, teknik ve insan eliyle yazılmış gibi sunacaksın. Blog, inceleme veya hikaye anlatımı havası olmasın; ürünle ilgili teknik ve donanım özelliklerini açık, net ve doğrudan anlatımla yaz. Her cümlede ürün adını tekrarlamaktan kaçın. Cümleleri kelime değiştirerek değil, tamamen farklı yapı ve sıralama ile yaz. Bilgi ve özellikler birebir korunmalı, anlam kaybı olmamalı. KURALLAR: - Yalnızca <rewrite> içindeki cümleleri değiştir. - <rewrite> etiketlerini kaldır. - Paragraf ve başlık düzenini aynen koru. İPUÇLARI: - Her cümle akıcı, profesyonel ve teknik dille yazılsın. - Ürün adını az kullan, yerine gerekli olursa "cihaz", "model", "ürün" gibi ifadeleri tercih et. - Kısa, net ve bilgi odaklı cümleler kullan. - Gereksiz sıfatlardan, kişisel yorumlardan kaçın. - Model adı, teknik terimler varsa olduğu gibi koru. - "Kullanıcı" kelimesini kullanmaktan kaçın. ÖRNEK: Girdi: <rewrite>Bu aksiyon kamerası, yüksek çözünürlüklü 4K videolar çekmenizi sağlar. SJCAM SJ4000 Air modeli, 170 derece geniş açılı lens ile donatılmıştır.</rewrite> Çıktı: Yüksek çözünürlüklü 4K video kaydı imkanı sunar. 170 derece geniş açılı lens ile daha kapsamlı görüntüler elde edilir. Şimdi aşağıdaki metni yukarıdaki kurallara uygun şekilde düzenle: --- Girdi: Ana Başlık
+
+<rewrite>Yeniden yazılacak cümle.</rewrite>
+
+Bu cümle olduğu gibi kalacak.
+
+<rewrite>Bu da yeniden yazılacak.</rewrite> --- Çıktı:"
+`;

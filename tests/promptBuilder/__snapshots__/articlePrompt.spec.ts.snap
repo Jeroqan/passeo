@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`buildArticlePrompt should generate the correct prompt with given parameters 1`] = `"Sen profesyonel bir içerik yazarı ve SEO uzmanısın. Kullanıcıya sadece HTML formatında, başlık etiketleri (<h1>, <h2> vb.) ve paragraflar (<p>) kullanarak yanıt ver. Ürünün adı **Süper Akıllı Telefon**, markası **TeknoMarka**, kategorisi **Elektronik** ve odak anahtar kelime **en iyi akıllı telefon**. Makale yapısı: önce bir başlık, sonra 3–5 kısa paragraf, her paragrafta anahtar kelimeyi doğal şekilde bir kez kullan. Cümleleri sade ve akıcı tut, gereksiz tekrar yapma."`;

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ratelimit } from '@/lib/ratelimit';
-import { withLogging } from '@/lib/logging';
+// import { withLogging } from '@/lib/logging';
 import { withApiMetrics } from '@/lib/apiMetrics';
 
 async function handler(req: NextRequest) {
@@ -50,6 +50,6 @@ async function handler(req: NextRequest) {
     }
 }
 
-export const POST = withApiMetrics(withLogging(handler));
+export const POST = withApiMetrics(handler);
 
 export const runtime = 'nodejs'; 

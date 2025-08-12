@@ -3,7 +3,7 @@ export const runtime = 'nodejs';
 import { NextRequest, NextResponse } from 'next/server';
 import { processContentBlockRequest } from '@/lib/contentBlockLogic';
 import { openai, streamToResponse } from '@/lib/openai';
-import { withLogging } from '@/lib/logging';
+// import { withLogging } from '@/lib/logging';
 
 async function handler(req: NextRequest) {
   const payload = await req.json();
@@ -29,4 +29,4 @@ async function handler(req: NextRequest) {
   return streamToResponse(responseStream);
 }
 
-export const POST = withLogging(handler); 
+export const POST = handler; 

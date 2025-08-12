@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { streamText } from 'ai';
 import { openai } from '@ai-sdk/openai';
 import { prepareArticleGeneration, ArticleGenerationSchema } from '@/lib/articleGenerationLogic';
-import { withLogging } from '@/lib/logging';
+// import { withLogging } from '@/lib/logging';
 
 export const runtime = 'edge';
 
@@ -27,4 +27,4 @@ async function handler(req: NextRequest) {
   return result.toDataStreamResponse();
 }
 
-export const POST = withLogging(handler); 
+export const POST = handler; 

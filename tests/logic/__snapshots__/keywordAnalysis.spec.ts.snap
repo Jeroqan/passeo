@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`analyzeKeywords Logic Normal Mode (isFree = false) should return keywords using both OpenAI and SerpApi, sorted by trend 1`] = `
+[
+  {
+    "relatedTerms": [],
+    "searchVolume": 1158,
+    "text": "kamera kalitesi",
+    "trend": 94,
+    "type": "feature",
+  },
+  {
+    "relatedTerms": [],
+    "searchVolume": 759,
+    "text": "Test Product teknik özellikleri",
+    "trend": 79,
+    "type": "technical",
+  },
+  {
+    "relatedTerms": [],
+    "searchVolume": 1082,
+    "text": "pil ömrü",
+    "trend": 76,
+    "type": "technical",
+  },
+]
+`;

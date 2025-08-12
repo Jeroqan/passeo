@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { processFeedback } from '@/lib/feedbackLogic';
 import { prisma } from '@/lib/prisma'; // Gerçek Prisma client'ını import ediyoruz
-import { withLogging } from '@/lib/logging';
+// import { withLogging } from '@/lib/logging';
 
 async function handler(req: NextRequest) {
   try {
@@ -31,4 +31,4 @@ async function handler(req: NextRequest) {
   }
 }
 
-export const POST = withLogging(handler); 
+export const POST = handler; 

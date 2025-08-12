@@ -5,11 +5,11 @@ import { NextResponse } from 'next/server';
 
 export async function GET() {
   try {
-    const metrics = await register.metrics();
-    return new NextResponse(metrics, {
+    // Metrics temporarily disabled for Vercel deployment
+    return new NextResponse('Metrics temporarily disabled', {
       status: 200,
       headers: {
-        'Content-Type': register.contentType,
+        'Content-Type': 'text/plain',
       },
     });
   } catch (error) {

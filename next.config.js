@@ -19,6 +19,8 @@ const nextConfig = {
         fs: false,
         path: false,
         os: false,
+        cluster: false,
+        v8: false,
       };
     }
 

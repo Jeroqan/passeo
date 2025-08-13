@@ -6,7 +6,7 @@ const nextConfig = {
     optimizeCss: true
   },
   // Vercel'de Edge Runtime sorunları yaşandığı için Node.js runtime kullanıyoruz
-  runtime: 'nodejs',
+  // runtime: 'nodejs', // Next.js 13'te bu seçenek geçersiz
   webpack: (config, { isServer }) => {
     // AI modelleri için önbellek ayarları
     config.module.rules.push({

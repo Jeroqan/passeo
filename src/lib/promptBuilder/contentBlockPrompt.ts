@@ -94,4 +94,7 @@ export async function generateContentBlock(
     const finalContent = await callGPT(humanizePrompt);
 
     return finalContent; // Sadece son içeriği döndür
-} 
+}
+
+// Eksik export - createContentBlockPrompt
+export const createContentBlockPrompt = createTechnicalPrompt; 

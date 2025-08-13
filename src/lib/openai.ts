@@ -35,4 +35,15 @@ export function streamToResponse(stream: Stream<OpenAI.Chat.Completions.ChatComp
             'Cache-Control': 'no-cache, no-transform',
         }
     });
+}
+
+// Eksik export - generateContent
+export async function generateContent(prompt: string): Promise<string> {
+    const completion = await openai.chat.completions.create({
+        model: 'gpt-4o',
+        messages: [{ role: 'user', content: prompt }],
+        temperature: 0.7,
+    });
+    
+    return completion.choices[0]?.message?.content || '';
 } 

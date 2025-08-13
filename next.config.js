@@ -12,6 +12,16 @@ const nextConfig = {
       type: 'asset/resource'
     });
 
+    // Vercel için webpack optimizasyonları
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        path: false,
+        os: false,
+      };
+    }
+
     return config;
   },
   // Statik dosya optimizasyonları
@@ -20,7 +30,11 @@ const nextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200],
     imageSizes: [16, 32, 48, 64, 96, 128, 256],
     minimumCacheTTL: 60
-  }
+  },
+  // Vercel için ek optimizasyonlar
+  swcMinify: true,
+  compress: true,
+  poweredByHeader: false
 }
 
 module.exports = nextConfig 

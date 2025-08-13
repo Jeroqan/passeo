@@ -1,0 +1,42 @@
+# AI content tools (Python kodları Vercel'de çalışmaz)
+ai-content-tools/
+
+# Test dosyaları
+tests/
+e2e/
+*.spec.ts
+*.test.ts
+*.spec.js
+*.test.js
+
+# Development dosyaları
+.env.local
+.env.development
+.env.test
+*.log
+grafana.log
+
+# Build artifacts
+.next/
+out/
+dist/
+
+# Dependencies
+node_modules/
+venv/
+.venv/
+
+# Docker dosyaları
+Dockerfile
+docker-compose.yml
+
+# Git
+.git/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

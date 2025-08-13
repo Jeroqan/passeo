@@ -4,7 +4,8 @@ import { openai } from '@ai-sdk/openai';
 import { prepareArticleGeneration, ArticleGenerationSchema } from '@/lib/articleGenerationLogic';
 // import { withLogging } from '@/lib/logging';
 
-export const runtime = 'edge';
+// Edge Runtime'da prom-client çalışmadığı için Node.js runtime kullanıyoruz
+export const runtime = 'nodejs';
 
 async function handler(req: NextRequest) {
   const body = await req.json();

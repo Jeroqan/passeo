@@ -10,6 +10,11 @@
       "runtime": "nodejs18.x"
     }
   },
+  "build": {
+    "env": {
+      "NEXT_TELEMETRY_DISABLED": "1"
+    }
+  }
   "env": {
     "NODE_ENV": "production"
   }

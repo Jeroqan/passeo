@@ -10,8 +10,8 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = "file:./dev.db"
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 model ContentHistory {
@@ -23,6 +23,8 @@ model ContentHistory {
   content       String   // Generated content
   createdAt     DateTime @default(now())
   updatedAt     DateTime @updatedAt
+
+  @@map("content_history")
 }
 
 model User {
@@ -32,6 +34,8 @@ model User {
   role      String   // 'admin' veya 'user'
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  @@map("users")
 }
 
 model Feedback {
@@ -40,4 +44,6 @@ model Feedback {
   type      String
   message   String
   page      String?
+
+  @@map("feedback")
 }
